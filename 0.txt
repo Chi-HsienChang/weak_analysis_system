@@ -1,0 +1,1359 @@
+0000
+0
+0001
+1
+0010
+1
+0011
+2
+0100
+1
+0101
+2
+0110
+2
+0111
+3
+1000
+1
+1001
+2
+1010
+2
+1011
+3
+1100
+2
+1101
+3
+1110
+3
+1111
+4
+epi_size == 1
+current combination index is 1 
+enumerations have 2 pattern:
+0 
+1 
+
+################ start count weak ####################
+
+---------- in check_weak --------------
+current combination index is 1 
+current enumeration is 0 
+A =  0 
+B =  1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 
+allele =  0 
+constraint = (1, 0) 
+0000
+constraint = (1, 0) 
+0001
+constraint = (1, 0) 
+0010
+constraint = (1, 0) 
+0011
+constraint = (1, 0) 
+1000
+constraint = (1, 0) 
+1001
+constraint = (1, 0) 
+1010
+constraint = (1, 0) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 
+allele =  1 
+constraint = (1, 1) 
+0100
+constraint = (1, 1) 
+0101
+constraint = (1, 1) 
+0110
+constraint = (1, 1) 
+0111
+constraint = (1, 1) 
+1100
+constraint = (1, 1) 
+1101
+constraint = (1, 1) 
+1110
+constraint = (1, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 
+current enumeration is 1 
+A =  1 
+B =  0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 
+allele =  1 
+constraint = (1, 1) 
+0100
+constraint = (1, 1) 
+0101
+constraint = (1, 1) 
+0110
+constraint = (1, 1) 
+0111
+constraint = (1, 1) 
+1100
+constraint = (1, 1) 
+1101
+constraint = (1, 1) 
+1110
+constraint = (1, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 
+allele =  0 
+constraint = (1, 0) 
+0000
+constraint = (1, 0) 
+0001
+constraint = (1, 0) 
+0010
+constraint = (1, 0) 
+0011
+constraint = (1, 0) 
+1000
+constraint = (1, 0) 
+1001
+constraint = (1, 0) 
+1010
+constraint = (1, 0) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+################ end count weak ####################
+epi_size == 1
+current combination index is 2 
+enumerations have 2 pattern:
+0 
+1 
+
+################ start count weak ####################
+
+---------- in check_weak --------------
+current combination index is 2 
+current enumeration is 0 
+A =  0 
+B =  1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 
+allele =  0 
+constraint = (2, 0) 
+0000
+constraint = (2, 0) 
+0001
+constraint = (2, 0) 
+0100
+constraint = (2, 0) 
+0101
+constraint = (2, 0) 
+1000
+constraint = (2, 0) 
+1001
+constraint = (2, 0) 
+1100
+constraint = (2, 0) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 
+allele =  1 
+constraint = (2, 1) 
+0010
+constraint = (2, 1) 
+0011
+constraint = (2, 1) 
+0110
+constraint = (2, 1) 
+0111
+constraint = (2, 1) 
+1010
+constraint = (2, 1) 
+1011
+constraint = (2, 1) 
+1110
+constraint = (2, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 2 
+current enumeration is 1 
+A =  1 
+B =  0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 
+allele =  1 
+constraint = (2, 1) 
+0010
+constraint = (2, 1) 
+0011
+constraint = (2, 1) 
+0110
+constraint = (2, 1) 
+0111
+constraint = (2, 1) 
+1010
+constraint = (2, 1) 
+1011
+constraint = (2, 1) 
+1110
+constraint = (2, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 
+allele =  0 
+constraint = (2, 0) 
+0000
+constraint = (2, 0) 
+0001
+constraint = (2, 0) 
+0100
+constraint = (2, 0) 
+0101
+constraint = (2, 0) 
+1000
+constraint = (2, 0) 
+1001
+constraint = (2, 0) 
+1100
+constraint = (2, 0) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+################ end count weak ####################
+epi_size == 1
+current combination index is 3 
+enumerations have 2 pattern:
+0 
+1 
+
+################ start count weak ####################
+
+---------- in check_weak --------------
+current combination index is 3 
+current enumeration is 0 
+A =  0 
+B =  1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  3 
+allele =  0 
+constraint = (3, 0) 
+0000
+constraint = (3, 0) 
+0010
+constraint = (3, 0) 
+0100
+constraint = (3, 0) 
+0110
+constraint = (3, 0) 
+1000
+constraint = (3, 0) 
+1010
+constraint = (3, 0) 
+1100
+constraint = (3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  3 
+allele =  1 
+constraint = (3, 1) 
+0001
+constraint = (3, 1) 
+0011
+constraint = (3, 1) 
+0101
+constraint = (3, 1) 
+0111
+constraint = (3, 1) 
+1001
+constraint = (3, 1) 
+1011
+constraint = (3, 1) 
+1101
+constraint = (3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 3 
+current enumeration is 1 
+A =  1 
+B =  0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  3 
+allele =  1 
+constraint = (3, 1) 
+0001
+constraint = (3, 1) 
+0011
+constraint = (3, 1) 
+0101
+constraint = (3, 1) 
+0111
+constraint = (3, 1) 
+1001
+constraint = (3, 1) 
+1011
+constraint = (3, 1) 
+1101
+constraint = (3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  3 
+allele =  0 
+constraint = (3, 0) 
+0000
+constraint = (3, 0) 
+0010
+constraint = (3, 0) 
+0100
+constraint = (3, 0) 
+0110
+constraint = (3, 0) 
+1000
+constraint = (3, 0) 
+1010
+constraint = (3, 0) 
+1100
+constraint = (3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+################ end count weak ####################
+epi_size == 2
+current combination index is 1 2 
+enumerations have 4 pattern:
+0 0 
+0 1 
+1 0 
+1 1 
+
+################ start count weak ####################
+
+---------- in check_weak --------------
+current combination index is 1 2 
+current enumeration is 0 0 
+A =  0 0 
+B =  1 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  0 0 
+constraint = (1, 0) 
+(2, 0) 
+0000
+constraint = (1, 0) 
+(2, 0) 
+0001
+constraint = (1, 0) 
+(2, 0) 
+1000
+constraint = (1, 0) 
+(2, 0) 
+1001
+highest_fitness_chromosomes: 1001 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  1 0 
+constraint = (1, 1) 
+(2, 0) 
+0100
+constraint = (1, 1) 
+(2, 0) 
+0101
+constraint = (1, 1) 
+(2, 0) 
+1100
+constraint = (1, 1) 
+(2, 0) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 
+current enumeration is 0 1 
+A =  0 1 
+B =  1 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  0 1 
+constraint = (1, 0) 
+(2, 1) 
+0010
+constraint = (1, 0) 
+(2, 1) 
+0011
+constraint = (1, 0) 
+(2, 1) 
+1010
+constraint = (1, 0) 
+(2, 1) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  1 1 
+constraint = (1, 1) 
+(2, 1) 
+0110
+constraint = (1, 1) 
+(2, 1) 
+0111
+constraint = (1, 1) 
+(2, 1) 
+1110
+constraint = (1, 1) 
+(2, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 
+current enumeration is 1 0 
+A =  1 0 
+B =  0 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  1 0 
+constraint = (1, 1) 
+(2, 0) 
+0100
+constraint = (1, 1) 
+(2, 0) 
+0101
+constraint = (1, 1) 
+(2, 0) 
+1100
+constraint = (1, 1) 
+(2, 0) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  0 0 
+constraint = (1, 0) 
+(2, 0) 
+0000
+constraint = (1, 0) 
+(2, 0) 
+0001
+constraint = (1, 0) 
+(2, 0) 
+1000
+constraint = (1, 0) 
+(2, 0) 
+1001
+highest_fitness_chromosomes: 1001 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 
+current enumeration is 1 1 
+A =  1 1 
+B =  0 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  1 1 
+constraint = (1, 1) 
+(2, 1) 
+0110
+constraint = (1, 1) 
+(2, 1) 
+0111
+constraint = (1, 1) 
+(2, 1) 
+1110
+constraint = (1, 1) 
+(2, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 
+allele =  0 1 
+constraint = (1, 0) 
+(2, 1) 
+0010
+constraint = (1, 0) 
+(2, 1) 
+0011
+constraint = (1, 0) 
+(2, 1) 
+1010
+constraint = (1, 0) 
+(2, 1) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+################ end count weak ####################
+epi_size == 2
+current combination index is 1 3 
+enumerations have 4 pattern:
+0 0 
+0 1 
+1 0 
+1 1 
+
+################ start count weak ####################
+
+---------- in check_weak --------------
+current combination index is 1 3 
+current enumeration is 0 0 
+A =  0 0 
+B =  1 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  0 0 
+constraint = (1, 0) 
+(3, 0) 
+0000
+constraint = (1, 0) 
+(3, 0) 
+0010
+constraint = (1, 0) 
+(3, 0) 
+1000
+constraint = (1, 0) 
+(3, 0) 
+1010
+highest_fitness_chromosomes: 1010 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  1 0 
+constraint = (1, 1) 
+(3, 0) 
+0100
+constraint = (1, 1) 
+(3, 0) 
+0110
+constraint = (1, 1) 
+(3, 0) 
+1100
+constraint = (1, 1) 
+(3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 3 
+current enumeration is 0 1 
+A =  0 1 
+B =  1 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  0 1 
+constraint = (1, 0) 
+(3, 1) 
+0001
+constraint = (1, 0) 
+(3, 1) 
+0011
+constraint = (1, 0) 
+(3, 1) 
+1001
+constraint = (1, 0) 
+(3, 1) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  1 1 
+constraint = (1, 1) 
+(3, 1) 
+0101
+constraint = (1, 1) 
+(3, 1) 
+0111
+constraint = (1, 1) 
+(3, 1) 
+1101
+constraint = (1, 1) 
+(3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 3 
+current enumeration is 1 0 
+A =  1 0 
+B =  0 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  1 0 
+constraint = (1, 1) 
+(3, 0) 
+0100
+constraint = (1, 1) 
+(3, 0) 
+0110
+constraint = (1, 1) 
+(3, 0) 
+1100
+constraint = (1, 1) 
+(3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  0 0 
+constraint = (1, 0) 
+(3, 0) 
+0000
+constraint = (1, 0) 
+(3, 0) 
+0010
+constraint = (1, 0) 
+(3, 0) 
+1000
+constraint = (1, 0) 
+(3, 0) 
+1010
+highest_fitness_chromosomes: 1010 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 3 
+current enumeration is 1 1 
+A =  1 1 
+B =  0 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  1 1 
+constraint = (1, 1) 
+(3, 1) 
+0101
+constraint = (1, 1) 
+(3, 1) 
+0111
+constraint = (1, 1) 
+(3, 1) 
+1101
+constraint = (1, 1) 
+(3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 3 
+allele =  0 1 
+constraint = (1, 0) 
+(3, 1) 
+0001
+constraint = (1, 0) 
+(3, 1) 
+0011
+constraint = (1, 0) 
+(3, 1) 
+1001
+constraint = (1, 0) 
+(3, 1) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+################ end count weak ####################
+epi_size == 2
+current combination index is 2 3 
+enumerations have 4 pattern:
+0 0 
+0 1 
+1 0 
+1 1 
+
+################ start count weak ####################
+
+---------- in check_weak --------------
+current combination index is 2 3 
+current enumeration is 0 0 
+A =  0 0 
+B =  1 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  0 0 
+constraint = (2, 0) 
+(3, 0) 
+0000
+constraint = (2, 0) 
+(3, 0) 
+0100
+constraint = (2, 0) 
+(3, 0) 
+1000
+constraint = (2, 0) 
+(3, 0) 
+1100
+highest_fitness_chromosomes: 1100 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  1 0 
+constraint = (2, 1) 
+(3, 0) 
+0010
+constraint = (2, 1) 
+(3, 0) 
+0110
+constraint = (2, 1) 
+(3, 0) 
+1010
+constraint = (2, 1) 
+(3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 2 3 
+current enumeration is 0 1 
+A =  0 1 
+B =  1 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  0 1 
+constraint = (2, 0) 
+(3, 1) 
+0001
+constraint = (2, 0) 
+(3, 1) 
+0101
+constraint = (2, 0) 
+(3, 1) 
+1001
+constraint = (2, 0) 
+(3, 1) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  1 1 
+constraint = (2, 1) 
+(3, 1) 
+0011
+constraint = (2, 1) 
+(3, 1) 
+0111
+constraint = (2, 1) 
+(3, 1) 
+1011
+constraint = (2, 1) 
+(3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 2 3 
+current enumeration is 1 0 
+A =  1 0 
+B =  0 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  1 0 
+constraint = (2, 1) 
+(3, 0) 
+0010
+constraint = (2, 1) 
+(3, 0) 
+0110
+constraint = (2, 1) 
+(3, 0) 
+1010
+constraint = (2, 1) 
+(3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  0 0 
+constraint = (2, 0) 
+(3, 0) 
+0000
+constraint = (2, 0) 
+(3, 0) 
+0100
+constraint = (2, 0) 
+(3, 0) 
+1000
+constraint = (2, 0) 
+(3, 0) 
+1100
+highest_fitness_chromosomes: 1100 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 2 3 
+current enumeration is 1 1 
+A =  1 1 
+B =  0 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  1 1 
+constraint = (2, 1) 
+(3, 1) 
+0011
+constraint = (2, 1) 
+(3, 1) 
+0111
+constraint = (2, 1) 
+(3, 1) 
+1011
+constraint = (2, 1) 
+(3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  2 3 
+allele =  0 1 
+constraint = (2, 0) 
+(3, 1) 
+0001
+constraint = (2, 0) 
+(3, 1) 
+0101
+constraint = (2, 0) 
+(3, 1) 
+1001
+constraint = (2, 0) 
+(3, 1) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+################ end count weak ####################
+epi_size == 3
+current combination index is 1 2 3 
+enumerations have 8 pattern:
+0 0 0 
+0 0 1 
+0 1 0 
+0 1 1 
+1 0 0 
+1 0 1 
+1 1 0 
+1 1 1 
+
+################ start count weak ####################
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 0 0 0 
+A =  0 0 0 
+B =  1 0 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 0 0 
+constraint = (1, 0) 
+(2, 0) 
+(3, 0) 
+0000
+constraint = (1, 0) 
+(2, 0) 
+(3, 0) 
+1000
+highest_fitness_chromosomes: 1000 
+max_fitness = 1
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 0 0 
+constraint = (1, 1) 
+(2, 0) 
+(3, 0) 
+0100
+constraint = (1, 1) 
+(2, 0) 
+(3, 0) 
+1100
+highest_fitness_chromosomes: 1100 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 0 0 1 
+A =  0 0 1 
+B =  1 0 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 0 1 
+constraint = (1, 0) 
+(2, 0) 
+(3, 1) 
+0001
+constraint = (1, 0) 
+(2, 0) 
+(3, 1) 
+1001
+highest_fitness_chromosomes: 1001 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 0 1 
+constraint = (1, 1) 
+(2, 0) 
+(3, 1) 
+0101
+constraint = (1, 1) 
+(2, 0) 
+(3, 1) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 0 1 0 
+A =  0 1 0 
+B =  1 1 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 1 0 
+constraint = (1, 0) 
+(2, 1) 
+(3, 0) 
+0010
+constraint = (1, 0) 
+(2, 1) 
+(3, 0) 
+1010
+highest_fitness_chromosomes: 1010 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 1 0 
+constraint = (1, 1) 
+(2, 1) 
+(3, 0) 
+0110
+constraint = (1, 1) 
+(2, 1) 
+(3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 0 1 1 
+A =  0 1 1 
+B =  1 1 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 1 1 
+constraint = (1, 0) 
+(2, 1) 
+(3, 1) 
+0011
+constraint = (1, 0) 
+(2, 1) 
+(3, 1) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 1 1 
+constraint = (1, 1) 
+(2, 1) 
+(3, 1) 
+0111
+constraint = (1, 1) 
+(2, 1) 
+(3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 1 0 0 
+A =  1 0 0 
+B =  0 0 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 0 0 
+constraint = (1, 1) 
+(2, 0) 
+(3, 0) 
+0100
+constraint = (1, 1) 
+(2, 0) 
+(3, 0) 
+1100
+highest_fitness_chromosomes: 1100 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 0 0 
+constraint = (1, 0) 
+(2, 0) 
+(3, 0) 
+0000
+constraint = (1, 0) 
+(2, 0) 
+(3, 0) 
+1000
+highest_fitness_chromosomes: 1000 
+max_fitness = 1
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 1 0 1 
+A =  1 0 1 
+B =  0 0 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 0 1 
+constraint = (1, 1) 
+(2, 0) 
+(3, 1) 
+0101
+constraint = (1, 1) 
+(2, 0) 
+(3, 1) 
+1101
+highest_fitness_chromosomes: 1101 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 0 1 
+constraint = (1, 0) 
+(2, 0) 
+(3, 1) 
+0001
+constraint = (1, 0) 
+(2, 0) 
+(3, 1) 
+1001
+highest_fitness_chromosomes: 1001 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 1 1 0 
+A =  1 1 0 
+B =  0 1 0 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 1 0 
+constraint = (1, 1) 
+(2, 1) 
+(3, 0) 
+0110
+constraint = (1, 1) 
+(2, 1) 
+(3, 0) 
+1110
+highest_fitness_chromosomes: 1110 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 1 0 
+constraint = (1, 0) 
+(2, 1) 
+(3, 0) 
+0010
+constraint = (1, 0) 
+(2, 1) 
+(3, 0) 
+1010
+highest_fitness_chromosomes: 1010 
+max_fitness = 2
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+
+---------- in check_weak --------------
+current combination index is 1 2 3 
+current enumeration is 1 1 1 
+A =  1 1 1 
+B =  0 1 1 
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  1 1 1 
+constraint = (1, 1) 
+(2, 1) 
+(3, 1) 
+0111
+constraint = (1, 1) 
+(2, 1) 
+(3, 1) 
+1111
+highest_fitness_chromosomes: 1111 
+max_fitness = 4
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+
+++++++++++++ in check_constraint ++++++++++++
+locus =  1 2 3 
+allele =  0 1 1 
+constraint = (1, 0) 
+(2, 1) 
+(3, 1) 
+0011
+constraint = (1, 0) 
+(2, 1) 
+(3, 1) 
+1011
+highest_fitness_chromosomes: 1011 
+max_fitness = 3
+values_at_v: 1 
+++++++++++++ out check_constraint ++++++++++++
+constrained_optima_original.first: 1 
+constrained_optima_flip.first: 1 
+is the enumeration weak? 0
+################ end count weak ####################
+0 0 0 0 
