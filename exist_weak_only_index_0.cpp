@@ -97,7 +97,7 @@ double calculate_fitness(const string& chromosome, const string& method) {
         return total_fitness;
     } else if (method == "leadingone") {
         // cout << method << "!!" << endl;
-        double leading_ones = 0;
+        int leading_ones = 0;
         for (char bit : chromosome) {
             if (bit == '1') {
                 leading_ones++;
@@ -223,79 +223,25 @@ std::vector<std::vector<int>> generateBinarySequences(int n) {
     return allSequences;
 }
 
-// std::vector<std::vector<int>> generateCombinations(int n, int k) {
-//     std::vector<int> bitmask(k, 1);  // 創建k個1
-//     bitmask.resize(n, 0);  // 後面填充n-k個0
-
-//     std::vector<std::vector<int>> combinations;
-
-//     do {
-//         std::vector<int> currentCombination;
-//         for (int i = 0; i < n; ++i) {
-//             if (bitmask[i]) {
-//                 currentCombination.push_back(i + 1);  // 輸出選中的元素
-//             }
-//         }
-//         combinations.push_back(currentCombination);
-//     } while (std::prev_permutation(bitmask.begin(), bitmask.end()));  // 生成下一個排列
-
-//     return combinations;
-// }
-
-
-// std::vector<std::vector<int>> generateCombinations(int n, int k, int target_index) {
-//     std::vector<int> elements;
-//     for (int i = 0; i < n; ++i) {
-//         if (i != target_index) {
-//             elements.push_back(i); // 排除 target_index
-//         }
-//     }
-
-//     std::vector<int> bitmask(k, 1); // 創建k個1
-//     bitmask.resize(elements.size(), 0); // 後面填充其餘為0
-
-//     std::vector<std::vector<int>> combinations;
-
-//     do {
-//         std::vector<int> currentCombination;
-//         for (size_t i = 0; i < elements.size(); ++i) {
-//             if (bitmask[i]) {
-//                 currentCombination.push_back(elements[i]);
-//             }
-//         }
-//         combinations.push_back(currentCombination);
-//     } while (std::prev_permutation(bitmask.begin(), bitmask.end())); // 生成下一個排列
-
-//     return combinations;
-// }
-
-std::vector<std::vector<int>> generateCombinations(int n, int k, int target_index) {
-    std::vector<int> elements;
-
-    // 建立不包含 target_index 的元素清單
-    for (int i = 0; i <= n; ++i) { // n 表示實際範圍
-        if (i != target_index) {
-            elements.push_back(i);
-        }
-    }
-
-    std::vector<int> bitmask(k, 1);            // 創建 k 個 1
-    bitmask.resize(elements.size(), 0);       // 後面填充其餘為 0
+std::vector<std::vector<int>> generateCombinations(int n, int k) {
+    std::vector<int> bitmask(k, 1);  // 創建k個1
+    bitmask.resize(n, 0);  // 後面填充n-k個0
 
     std::vector<std::vector<int>> combinations;
 
     do {
         std::vector<int> currentCombination;
-        for (size_t i = 0; i < elements.size(); ++i) {
+        for (int i = 0; i < n; ++i) {
             if (bitmask[i]) {
-                currentCombination.push_back(elements[i]);
+                currentCombination.push_back(i + 1);  // 輸出選中的元素
             }
         }
         combinations.push_back(currentCombination);
-    } while (std::prev_permutation(bitmask.begin(), bitmask.end())); // 生成下一個排列
+    } while (std::prev_permutation(bitmask.begin(), bitmask.end()));  // 生成下一個排列
 
     return combinations;
 }
+
 
 std::pair<std::set<char>, std::vector<std::string>> find_values_and_chromosomes_at_v_with_highest_fitness(const std::vector<std::string>& chromosomes, int u, char u_value, int v, const std::string& method) {
     std::set<char> values_at_v;
@@ -556,7 +502,7 @@ int check_weak(int target_index, auto combination, auto enumeration, auto chromo
         
 
         bool not_equal;
-        not_equal = check_constrained_optima(target_index, combination, enumeration_original, enumeration, chromosomes);
+        not_equal = check_constrained_optima(0, combination, enumeration_original, enumeration, chromosomes);
         // cout << "not_equal: " << not_equal << endl;
         // cout << "######################################" << endl;
 
@@ -580,7 +526,7 @@ int check_weak(int target_index, auto combination, auto enumeration, auto chromo
     return 0;
 }
 
-std::vector<int> count_weak(int L, int target_index, const string& method)
+std::vector<int> count_weak(int L, const string& method)
 {
     std::vector<std::vector<std::vector<int>>> weak_epi_set(L);
     std::vector<int> weak_epi_count(L, 0); 
@@ -589,21 +535,8 @@ std::vector<int> count_weak(int L, int target_index, const string& method)
 
     for (int epi_size = 1; epi_size < L; epi_size++)
     {  
-        auto combinations = generateCombinations(L-1, epi_size, target_index); // combinations = { [1, 2], [1, 3], [2, 3] }
+        auto combinations = generateCombinations(L-1, epi_size); // combinations = { [1, 2], [1, 3], [2, 3] }
         
-        if (DEBUG)
-        {
-            cout << "all combinations have " << combinations.size() << " pattern:"<< endl;
-            for (const auto& combination : combinations) {
-                for (const auto& elem : combination) {
-                    cout << elem << " ";
-                }
-                cout << endl;
-            }
-        }
-
-
-
         for (auto& combination : combinations) // combination = [1, 2]
         { 
             bool not_find_smaller_epi;
@@ -678,7 +611,7 @@ std::vector<int> count_weak(int L, int target_index, const string& method)
                 for (auto& enumeration : enumerations) // combination = [1, 2] and enumerations = { [0, 0], [0, 1], [1, 0], [1, 1]}
                 { 
 
-                    weak_epi_count[epi_size] += check_weak(target_index, combination, enumeration, chromosomes);
+                    weak_epi_count[epi_size] += check_weak(0, combination, enumeration, chromosomes);
                     if (weak_epi_count[epi_size])
                     {
                         weak_epi_set[epi_size].push_back(combination);
@@ -721,14 +654,11 @@ int main(int argc, char* argv[]) {
     int L = stoi(argv[1]);
     string method = argv[2];
 
-    
-    for (int target_index = 0; target_index < L; target_index++) {
-        cout << "S -> " << target_index << endl;
-        std::vector<int> weak_epi_count_results = count_weak(L, target_index, method);
-        for (int count : weak_epi_count_results) {
-            cout << count << " ";
-        }
-        cout << endl;
+    std::vector<int> weak_epi_count_results = count_weak(L, method);
+    for (int count : weak_epi_count_results) {
+        cout << count << " ";
     }
+    cout << endl;
+   
     return 0;
 }
