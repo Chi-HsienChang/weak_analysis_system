@@ -7,7 +7,7 @@
 #include <set>
 
 using namespace std;
-#define DEBUG 1 // Uncomment this line if DEBUG is meant to be a macro
+#define DEBUG 0 // Uncomment this line if DEBUG is meant to be a macro
 
 // Helper function for segment-based functions
 double calculate_segment_fitness(const string& segment, const string& method) {
@@ -34,32 +34,41 @@ double calculate_segment_fitness(const string& segment, const string& method) {
 }
 
 
-
 // Calculate the fitness of a chromosome based on the selected method
 double calculate_fitness(const string& chromosome, const string& method) {
     if (method == "onemax") {
-        // cout << method << "!!" << endl;
-        cout << chromosome << endl;
-        cout << count(chromosome.begin(), chromosome.end(), '1') << endl;
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << count(chromosome.begin(), chromosome.end(), '1') << endl;
+        }
         return count(chromosome.begin(), chromosome.end(), '1');
     } else if (method == "trap") {
-        // cout << method << "!!"<< endl;
-        cout << chromosome << endl;
-        cout << calculate_segment_fitness(chromosome, "trap") << endl;
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << calculate_segment_fitness(chromosome, "trap") << endl;
+        }
         return calculate_segment_fitness(chromosome, "trap");
     } else if (method == "niah") {
-        // cout << method << "!!"<< endl;
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << calculate_segment_fitness(chromosome, "niah") << endl;
+        }
         return calculate_segment_fitness(chromosome, "niah");
     } else if (method == "ctrap" || method == "cniah") {
-        // cout << method << "!!"<< endl;
         int segment_length = 4;
         double total_fitness = 0.0;
         for (size_t i = 0; i < chromosome.length(); i += segment_length) {
             string segment = chromosome.substr(i, min(segment_length, static_cast<int>(chromosome.length() - i)));
             total_fitness += calculate_segment_fitness(segment, method.substr(1));
         }
-        cout << chromosome << endl;
-        cout << total_fitness << endl;
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << total_fitness << endl;
+        }
         return total_fitness;
     } else if (method == "cyctrap") {
         // cout << method << "!!"<< endl;
@@ -80,8 +89,11 @@ double calculate_fitness(const string& chromosome, const string& method) {
                 break;
             }
         }
-        cout << chromosome << endl;
-        cout << total_fitness << endl;
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << total_fitness << endl;
+        }
         return total_fitness;
     } else if (method == "leadingone") {
         // cout << method << "!!" << endl;
@@ -93,8 +105,11 @@ double calculate_fitness(const string& chromosome, const string& method) {
                 break;
             }
         }
-        cout << chromosome << endl;
-        cout << leading_ones << endl;
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << leading_ones << endl;
+        }
         return leading_ones;
     } else if (method == "weak") {
         // cout << method << "!!" << endl;
@@ -111,8 +126,46 @@ double calculate_fitness(const string& chromosome, const string& method) {
         else
             weak_fiteness = 0;
 
-        // cout << chromosome << endl;
-        // cout << weak_fiteness << endl;
+
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << weak_fiteness << endl;
+        }
+        return weak_fiteness;
+    } else if (method == "test_equal_fitness") {
+        // cout << method << "!!" << endl;
+        
+        int weak_fiteness = 0;
+        if (chromosome == "111")
+            weak_fiteness = 4;
+        else if (chromosome == "100")
+            weak_fiteness = 3;
+        else if (chromosome == "000")
+            weak_fiteness = 3;
+        else
+            weak_fiteness = 0;
+
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << weak_fiteness << endl;
+        }
+        return weak_fiteness;
+    } else if (method == "onemax_weak") {
+        // cout << method << "!!" << endl;
+        
+        int weak_fiteness = 0;
+        if (count(chromosome.begin(), chromosome.end(), '1') == 0)
+            weak_fiteness = 1.5;
+        else
+            weak_fiteness = count(chromosome.begin(), chromosome.end(), '1');
+
+        if (DEBUG)
+        {
+            cout << chromosome << endl;
+            cout << weak_fiteness << endl;
+        }
         return weak_fiteness;
     }
     std::cerr << "Error: the problem does not exist!" << std::endl;
@@ -507,7 +560,7 @@ std::vector<int> count_weak(int L, const string& method)
                     // cout << "previous!!" << endl;
                     for (auto& previous : weak_epi_set[smaller_epi_size-1]) 
                     {
-                        cout << "previous" << endl;
+                        // cout << "previous" << endl;
                         is_subset = isSubset(previous, combination);
                         not_find_smaller_epi = !is_subset;
                         if(is_subset) break;
