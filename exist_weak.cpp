@@ -223,52 +223,6 @@ std::vector<std::vector<int>> generateBinarySequences(int n) {
     return allSequences;
 }
 
-// std::vector<std::vector<int>> generateCombinations(int n, int k) {
-//     std::vector<int> bitmask(k, 1);  // 創建k個1
-//     bitmask.resize(n, 0);  // 後面填充n-k個0
-
-//     std::vector<std::vector<int>> combinations;
-
-//     do {
-//         std::vector<int> currentCombination;
-//         for (int i = 0; i < n; ++i) {
-//             if (bitmask[i]) {
-//                 currentCombination.push_back(i + 1);  // 輸出選中的元素
-//             }
-//         }
-//         combinations.push_back(currentCombination);
-//     } while (std::prev_permutation(bitmask.begin(), bitmask.end()));  // 生成下一個排列
-
-//     return combinations;
-// }
-
-
-// std::vector<std::vector<int>> generateCombinations(int n, int k, int target_index) {
-//     std::vector<int> elements;
-//     for (int i = 0; i < n; ++i) {
-//         if (i != target_index) {
-//             elements.push_back(i); // 排除 target_index
-//         }
-//     }
-
-//     std::vector<int> bitmask(k, 1); // 創建k個1
-//     bitmask.resize(elements.size(), 0); // 後面填充其餘為0
-
-//     std::vector<std::vector<int>> combinations;
-
-//     do {
-//         std::vector<int> currentCombination;
-//         for (size_t i = 0; i < elements.size(); ++i) {
-//             if (bitmask[i]) {
-//                 currentCombination.push_back(elements[i]);
-//             }
-//         }
-//         combinations.push_back(currentCombination);
-//     } while (std::prev_permutation(bitmask.begin(), bitmask.end())); // 生成下一個排列
-
-//     return combinations;
-// }
-
 std::vector<std::vector<int>> generateCombinations(int n, int k, int target_index) {
     std::vector<int> elements;
 
@@ -295,30 +249,6 @@ std::vector<std::vector<int>> generateCombinations(int n, int k, int target_inde
     } while (std::prev_permutation(bitmask.begin(), bitmask.end())); // 生成下一個排列
 
     return combinations;
-}
-
-std::pair<std::set<char>, std::vector<std::string>> find_values_and_chromosomes_at_v_with_highest_fitness(const std::vector<std::string>& chromosomes, int u, char u_value, int v, const std::string& method) {
-    std::set<char> values_at_v;
-    std::vector<std::string> highest_fitness_chromosomes;
-    double max_fitness = -1.0;
-
-    for (const auto& chromosome : chromosomes) {
-        if (chromosome[u] == u_value) {
-            double fitness = calculate_fitness(chromosome, method);
-            if (fitness > max_fitness) {
-                max_fitness = fitness;
-                values_at_v.clear();
-                highest_fitness_chromosomes.clear();
-                values_at_v.insert(chromosome[v]);
-                highest_fitness_chromosomes.push_back(chromosome);
-            } else if (fitness == max_fitness) {
-                values_at_v.insert(chromosome[v]);
-                highest_fitness_chromosomes.push_back(chromosome);
-            }
-        }
-    }
-
-    return {values_at_v, highest_fitness_chromosomes};
 }
 
 std::pair<std::set<char>, std::vector<std::string>> check_constraint(int target_index, auto combination, auto enumeration, auto chromosomes){
@@ -485,8 +415,65 @@ bool check_constrained_optima(int target_index, auto combination, auto enumerati
     }
 
     if (constrained_optima_original.first != constrained_optima_flip.first) {
+
+        // cout << "{";
+        // for (const auto& elem : combination) {
+        //     cout << elem << " ";
+        // }
+        // cout << "} -> "<< target_index << endl;
+
+        // cout << "omega_A_pattern: ";
+        // for (const auto& elem : constrained_optima_original.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_B_pattern: ";
+        // for (const auto& elem : constrained_optima_flip.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_A_[target_index] = ";
+        // for (const auto& elem : constrained_optima_original.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;   
+
+        // cout << "omega_B_[target_index] = ";
+        // for (const auto& elem : constrained_optima_flip.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;    
+        // cout << endl;  
         return true;
     }else{
+        // cout << "{";
+        // for (const auto& elem : combination) {
+        //     cout << elem << " ";
+        // }
+        // cout << "} !-> "<< target_index << endl;
+
+        // cout << "omega_A_pattern: ";
+        // for (const auto& elem : constrained_optima_original.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_B_pattern: ";
+        // for (const auto& elem : constrained_optima_flip.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_A_[target_index] = ";
+        // for (const auto& elem : constrained_optima_original.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;   
+
+        // cout << "omega_B_[target_index] = ";
+        // for (const auto& elem : constrained_optima_flip.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;    
+        // cout << endl;        
         return false;
     }
 }
@@ -570,6 +557,11 @@ int check_weak(int target_index, auto combination, auto enumeration, auto chromo
 
     if (condition_holds == enumeration.size())
     {
+        cout << "{";
+        for (const auto& elem : combination) {
+            cout << elem << " ";
+        }
+        cout << "} -> "<< target_index << endl;        
         return 1;
     }
 
@@ -580,17 +572,23 @@ int check_weak(int target_index, auto combination, auto enumeration, auto chromo
     return 0;
 }
 
-std::vector<int> count_weak(int L, int target_index, const string& method)
+std::vector<int> count_weak(int L, int target_index, auto chromosomes, const string& method)
 {
     std::vector<std::vector<std::vector<int>>> weak_epi_set(L);
     std::vector<int> weak_epi_count(L, 0); 
     
-    auto chromosomes = generate_chromosomes(L, method);
 
     for (int epi_size = 1; epi_size < L; epi_size++)
     {  
         auto combinations = generateCombinations(L-1, epi_size, target_index); // combinations = { [1, 2], [1, 3], [2, 3] }
-        
+
+        // cout << "all combinations have " << combinations.size() << " pattern:"<< endl;
+        // for (const auto& combination : combinations) {
+        //     for (const auto& elem : combination) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;
+        // }    
         if (DEBUG)
         {
             cout << "all combinations have " << combinations.size() << " pattern:"<< endl;
@@ -628,6 +626,12 @@ std::vector<int> count_weak(int L, int target_index, const string& method)
                     for (auto& previous : weak_epi_set[smaller_epi_size-1]) 
                     {
                         // cout << "previous" << endl;
+
+                        // for (const auto& elem : previous) {
+                        //     cout << elem << " ";
+                        // }
+                        // cout<<endl;
+
                         is_subset = isSubset(previous, combination);
                         not_find_smaller_epi = !is_subset;
                         if(is_subset) break;
@@ -642,7 +646,12 @@ std::vector<int> count_weak(int L, int target_index, const string& method)
             // 如果沒有找到更小的epi，則進入if >>> 這裡使用 weak 機制排除
             if(not_find_smaller_epi)
             {
-                // std::cout<<"enter if "<<std::endl;
+
+                // cout << "not_find_smaller_epi" << endl;
+                // for (const auto& elem : combination) {
+                //     cout << elem << " ";
+                // }
+                // cout << endl;
                 auto enumerations = generateBinarySequences(epi_size); // enumerations = { [0, 0], [0, 1], [1, 0], [1, 1] }    
                 
                 if (DEBUG)
@@ -677,9 +686,9 @@ std::vector<int> count_weak(int L, int target_index, const string& method)
                 // 遍歷所有的 pattern 不用 remove best_sequence 的 pattern
                 for (auto& enumeration : enumerations) // combination = [1, 2] and enumerations = { [0, 0], [0, 1], [1, 0], [1, 1]}
                 { 
-
-                    weak_epi_count[epi_size] += check_weak(target_index, combination, enumeration, chromosomes);
-                    if (weak_epi_count[epi_size])
+                    int result = check_weak(target_index, combination, enumeration, chromosomes);
+                    weak_epi_count[epi_size] += result;
+                    if (result)
                     {
                         weak_epi_set[epi_size].push_back(combination);
                         break;
@@ -721,14 +730,31 @@ int main(int argc, char* argv[]) {
     int L = stoi(argv[1]);
     string method = argv[2];
 
+    auto chromosomes = generate_chromosomes(L, method);
+
+    // 排序根據 chom.second 的值由高到低
+    // sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
+    //     return a.second > b.second; // 由高到低排序
+    // });
+
+    // cout << "chromosomes & fitness" << endl;
+    // for (const auto& chom : chromosomes) {
+    //     cout << chom.first << " " << chom.second << endl;
+    // }
+    // cout << endl;
     
     for (int target_index = 0; target_index < L; target_index++) {
         cout << "S -> " << target_index << endl;
-        std::vector<int> weak_epi_count_results = count_weak(L, target_index, method);
+
+
+        
+        std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
+        // cout << "order_0  order_1 order_2 ... order_(ell-1): "<< endl;
         for (int count : weak_epi_count_results) {
             cout << count << " ";
         }
         cout << endl;
     }
+    cout << endl;
     return 0;
 }
