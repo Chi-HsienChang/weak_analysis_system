@@ -506,7 +506,17 @@ int check_weak(int target_index, auto combination, auto enumeration, auto chromo
         cout << endl;
     }
 
+    cout << "current combination index is ";
+    for (const auto& elem : combination) {
+        cout << elem << " ";
+    }
+    cout << endl;
 
+    cout << "current enumeration is ";
+    for (const auto& elem : enumeration) {
+        cout << elem << " ";
+    }
+    cout << "target_index = "<< target_index <<endl;
 
 
     auto enumeration_original = enumeration;
@@ -732,16 +742,17 @@ int main(int argc, char* argv[]) {
 
     auto chromosomes = generate_chromosomes(L, method);
 
-    // 排序根據 chom.second 的值由高到低
-    // sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
-    //     return a.second > b.second; // 由高到低排序
-    // });
 
-    // cout << "chromosomes & fitness" << endl;
-    // for (const auto& chom : chromosomes) {
-    //     cout << chom.first << " " << chom.second << endl;
-    // }
-    // cout << endl;
+    // 排序根據 chom.second 的值由高到低
+    sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
+        return a.second > b.second; // 由高到低排序
+    });
+
+    cout << "chromosomes & fitness" << endl;
+    for (const auto& chom : chromosomes) {
+        cout << chom.first << " " << chom.second << endl;
+    }
+    cout << endl;
     
     for (int target_index = 0; target_index < L; target_index++) {
         cout << "S -> " << target_index << endl;
