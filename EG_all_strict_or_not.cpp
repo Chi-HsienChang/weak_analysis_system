@@ -15,11 +15,11 @@ double calculate_segment_fitness(const string& segment, const string& method) {
     if (method == "trap") {
         int ones = count(segment.begin(), segment.end(), '1');
         if (ones == segment.length()) {
-            return 1.0;
+            return 4.0;
         } else if (ones == 0) {
-            return 0.8;
+            return 3.0;
         } else {
-            result = 0.8 - (ones * 0.8 / (segment.length() - 1));
+            result = 3.0 - (ones * 3.0 / (segment.length() - 1));
             if (result < 0)
             {
                 return 0.0;
@@ -437,58 +437,58 @@ bool check_constrained_optima(int target_index, auto combination, auto enumerati
 
 
 
-        cout << "omega_A_pattern: "<<endl;
-        for (const auto& elem : constrained_optima_original.second) {
-            cout << elem << endl;
-        }
+        // cout << "omega_A_pattern: "<<endl;
+        // for (const auto& elem : constrained_optima_original.second) {
+        //     cout << elem << endl;
+        // }
 
-        cout << "omega_B_pattern: "<<endl;;
-        for (const auto& elem : constrained_optima_flip.second) {
-            cout << elem << endl;
-        }
+        // cout << "omega_B_pattern: "<<endl;;
+        // for (const auto& elem : constrained_optima_flip.second) {
+        //     cout << elem << endl;
+        // }
 
-        cout << "omega_A_[target_index] = ";
-        for (const auto& elem : constrained_optima_original.first) {
-            cout << elem << " ";
-        }
-        cout << endl;   
+        // cout << "omega_A_[target_index] = ";
+        // for (const auto& elem : constrained_optima_original.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;   
 
-        cout << "omega_B_[target_index] = ";
-        for (const auto& elem : constrained_optima_flip.first) {
-            cout << elem << " ";
-        }
-        cout << endl;    
-        cout << endl;  
+        // cout << "omega_B_[target_index] = ";
+        // for (const auto& elem : constrained_optima_flip.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;    
+        // cout << endl;  
         return true;
     }else{
-        cout << "{";
-        for (const auto& elem : combination) {
-            cout << elem << " ";
-        }
-        cout << "} !-> "<< target_index << endl;
+        // cout << "{";
+        // for (const auto& elem : combination) {
+        //     cout << elem << " ";
+        // }
+        // cout << "} !-> "<< target_index << endl;
 
-        cout << "omega_A_pattern: ";
-        for (const auto& elem : constrained_optima_original.second) {
-            cout << elem << endl;
-        }
+        // cout << "omega_A_pattern: ";
+        // for (const auto& elem : constrained_optima_original.second) {
+        //     cout << elem << endl;
+        // }
 
-        cout << "omega_B_pattern: ";
-        for (const auto& elem : constrained_optima_flip.second) {
-            cout << elem << endl;
-        }
+        // cout << "omega_B_pattern: ";
+        // for (const auto& elem : constrained_optima_flip.second) {
+        //     cout << elem << endl;
+        // }
 
-        cout << "omega_A_[target_index] = ";
-        for (const auto& elem : constrained_optima_original.first) {
-            cout << elem << " ";
-        }
-        cout << endl;   
+        // cout << "omega_A_[target_index] = ";
+        // for (const auto& elem : constrained_optima_original.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;   
 
-        cout << "omega_B_[target_index] = ";
-        for (const auto& elem : constrained_optima_flip.first) {
-            cout << elem << " ";
-        }
-        cout << endl;    
-        cout << endl;        
+        // cout << "omega_B_[target_index] = ";
+        // for (const auto& elem : constrained_optima_flip.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;    
+        // cout << endl;        
         return false;
     }
 }
@@ -771,21 +771,6 @@ int main(int argc, char* argv[]) {
         cout << chom.first << " " << chom.second << endl;
     }
     cout << endl;
-
-
-    // int v = 20;
-    // for (int target_index = v; target_index < v+1; target_index++) {
-    //     cout << "S -> " << target_index << endl;
-        
-    //     std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
-    //     // cout << "order_0  order_1 order_2 ... order_(ell-1): "<< endl;
-    //     for (int count : weak_epi_count_results) {
-    //         cout << count << " ";
-    //     }
-    //     cout << endl;
-    // }
-    // cout << endl;
-    
     
 
     for (int target_index = 0; target_index < L; target_index++) {

@@ -1,0 +1,61 @@
+S -> 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 1
+{0 } -> 1 is strictly epistatic
+{2 } -> 1 is strictly epistatic
+{3 } -> 1 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 2
+{0 } -> 2 is strictly epistatic
+{1 } -> 2 is strictly epistatic
+{3 } -> 2 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 3
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 4
+{3 } -> 4 is strictly epistatic
+{5 } -> 4 is strictly epistatic
+{6 } -> 4 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 5
+{3 } -> 5 is strictly epistatic
+{4 } -> 5 is strictly epistatic
+{6 } -> 5 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 6
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 7
+{6 } -> 7 is strictly epistatic
+{8 } -> 7 is strictly epistatic
+{9 } -> 7 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 8
+{6 } -> 8 is strictly epistatic
+{7 } -> 8 is strictly epistatic
+{9 } -> 8 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 9
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 10
+{9 } -> 10 is strictly epistatic
+{11 } -> 10 is strictly epistatic
+{12 } -> 10 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 11
+{9 } -> 11 is strictly epistatic
+{10 } -> 11 is strictly epistatic
+{12 } -> 11 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 12
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 13
+{0 } -> 13 is strictly epistatic
+{12 } -> 13 is strictly epistatic
+{14 } -> 13 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+S -> 14
+{0 } -> 14 is strictly epistatic
+{12 } -> 14 is strictly epistatic
+{13 } -> 14 is strictly epistatic
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 
+

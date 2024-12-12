@@ -1,0 +1,77 @@
+S -> 0
+{3 } -> 0 is non-strictly epistatic 
+{6 } -> 0 is non-strictly epistatic 
+{9 } -> 0 is non-strictly epistatic 
+0 3 0 0 0 0 0 0 0 0 0 0 
+S -> 1
+{0 } -> 1 is strictly epistatic
+{2 } -> 1 is strictly epistatic
+{3 } -> 1 is strictly epistatic
+{6 } -> 1 is non-strictly epistatic 
+{9 } -> 1 is non-strictly epistatic 
+0 5 0 0 0 0 0 0 0 0 0 0 
+S -> 2
+{0 } -> 2 is strictly epistatic
+{1 } -> 2 is strictly epistatic
+{3 } -> 2 is strictly epistatic
+{6 } -> 2 is non-strictly epistatic 
+{9 } -> 2 is non-strictly epistatic 
+0 5 0 0 0 0 0 0 0 0 0 0 
+S -> 3
+{0 } -> 3 is non-strictly epistatic 
+{6 } -> 3 is non-strictly epistatic 
+{9 } -> 3 is non-strictly epistatic 
+0 3 0 0 0 0 0 0 0 0 0 0 
+S -> 4
+{0 } -> 4 is non-strictly epistatic 
+{3 } -> 4 is strictly epistatic
+{5 } -> 4 is strictly epistatic
+{6 } -> 4 is strictly epistatic
+{9 } -> 4 is non-strictly epistatic 
+0 5 0 0 0 0 0 0 0 0 0 0 
+S -> 5
+{0 } -> 5 is non-strictly epistatic 
+{3 } -> 5 is strictly epistatic
+{4 } -> 5 is strictly epistatic
+{6 } -> 5 is strictly epistatic
+{9 } -> 5 is non-strictly epistatic 
+0 5 0 0 0 0 0 0 0 0 0 0 
+S -> 6
+{0 } -> 6 is non-strictly epistatic 
+{3 } -> 6 is non-strictly epistatic 
+{9 } -> 6 is non-strictly epistatic 
+0 3 0 0 0 0 0 0 0 0 0 0 
+S -> 7
+{0 } -> 7 is non-strictly epistatic 
+{3 } -> 7 is non-strictly epistatic 
+{6 } -> 7 is strictly epistatic
+{8 } -> 7 is strictly epistatic
+{9 } -> 7 is strictly epistatic
+0 5 0 0 0 0 0 0 0 0 0 0 
+S -> 8
+{0 } -> 8 is non-strictly epistatic 
+{3 } -> 8 is non-strictly epistatic 
+{6 } -> 8 is strictly epistatic
+{7 } -> 8 is strictly epistatic
+{9 } -> 8 is strictly epistatic
+0 5 0 0 0 0 0 0 0 0 0 0 
+S -> 9
+{0 } -> 9 is non-strictly epistatic 
+{3 } -> 9 is non-strictly epistatic 
+{6 } -> 9 is non-strictly epistatic 
+0 3 0 0 0 0 0 0 0 0 0 0 
+S -> 10
+{0 } -> 10 is strictly epistatic
+{3 } -> 10 is non-strictly epistatic 
+{6 } -> 10 is non-strictly epistatic 
+{9 } -> 10 is strictly epistatic
+{11 } -> 10 is strictly epistatic
+0 5 0 0 0 0 0 0 0 0 0 0 
+S -> 11
+{0 } -> 11 is strictly epistatic
+{3 } -> 11 is non-strictly epistatic 
+{6 } -> 11 is non-strictly epistatic 
+{9 } -> 11 is strictly epistatic
+{10 } -> 11 is strictly epistatic
+0 5 0 0 0 0 0 0 0 0 0 0 
+
