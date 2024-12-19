@@ -5,4 +5,7 @@ This is for weak analysis
 
 詳細做好版本控制
 
+git push https://Chi-HsienChang@github.com/Chi-HsienChang/weak_analysis_system.git
+
+
 
