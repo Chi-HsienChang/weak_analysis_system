@@ -457,27 +457,32 @@ bool check_constrained_optima(int target_index, auto combination, auto enumerati
     auto constrained_optima_flip = check_constraint(target_index, combination, enumeration, chromosomes);
 
 
-    // if (DEBUG)
-    // {
-    //     cout << "constrained_optima_original.first: ";
-    //     for (const auto& elem : constrained_optima_original.first) {
-    //         cout << elem << " ";
-    //     }
-    //     cout << endl;
-    // }
 
-    // if (DEBUG)
-    // {
-    //     cout << "constrained_optima_flip.first: ";
-    //     for (const auto& elem : constrained_optima_flip.first) {
-    //         cout << elem << " ";
-    //     }
-    //     cout << endl;
-    // }
 
     if (constrained_optima_original.first != constrained_optima_flip.first) {
 
         if (!constrained_optima_original.first.empty() && !constrained_optima_flip.first.empty()){
+
+            // if (DEBUG)
+            // {
+            //     cout << "constrained_optima_original.first: ";
+            //     for (const auto& elem : constrained_optima_original.first) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;
+            // }
+
+            // if (DEBUG)
+            // {
+            //     cout << "constrained_optima_flip.first: ";
+            //     for (const auto& elem : constrained_optima_flip.first) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;
+            // }
+
+
+            //////
             // cout << "{";
             // for (const auto& elem : combination) {
             //     cout << elem << " ";
@@ -638,9 +643,18 @@ int check_weak(int target_index, auto combination, auto enumeration, auto chromo
             for (const auto& elem : combination) {
                 cout << elem << " ";
             }
-            cout << "} -> "<< target_index << endl;        
-            return 1;
+            cout << "} -> "<< target_index << endl;           
         }
+
+        // if (DEBUG){
+        //     cout << "--------------------------------------" << endl;
+        //     cout << "enumeration_original" << endl;
+        //     for (const auto& elem : enumeration_original) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;          
+        // }
+        return 1;
     }
 
     // if (DEBUG){
