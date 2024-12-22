@@ -33,7 +33,6 @@ double calculate_segment_fitness(const string& segment, const string& method) {
     return 0.0;
 }
 
-
 // Calculate the fitness of a chromosome based on the selected method
 double calculate_fitness(const string& chromosome, const string& method) {
     if (method == "onemax") {
@@ -95,7 +94,7 @@ double calculate_fitness(const string& chromosome, const string& method) {
             cout << total_fitness << endl;
         }
         return total_fitness;
-    } else if (method == "leadingone") {
+    } else if (method == "leadingones") {
         // cout << method << "!!" << endl;
         double leading_ones = 0;
         for (char bit : chromosome) {
@@ -111,6 +110,37 @@ double calculate_fitness(const string& chromosome, const string& method) {
             cout << leading_ones << endl;
         }
         return leading_ones;
+    } else if (method == "leadingtraps") {
+        int segment_length = 4;
+
+        std::vector<int> L(chromosome.length(), 0); 
+        L[0] = 1;
+        std::vector<double> segment_fitness_record(chromosome.length(), 0); 
+
+        double segment_fitness = 0.0;
+        for (size_t i = 0; i < chromosome.length(); i += segment_length) {
+            string segment = chromosome.substr(i, min(segment_length, static_cast<int>(chromosome.length() - i)));
+            segment_fitness = calculate_segment_fitness(segment, "trap");
+            segment_fitness_record[i] += segment_fitness;
+
+            if (i == 0)
+            {
+                continue;
+            }
+           
+            if (segment_fitness_record[i-4] == 4 && L[i-4] == 1) {
+                L[i] = 1;
+            }
+            
+        }
+
+        double total_fitness = 0.0;
+        for (size_t i = 0; i < chromosome.length(); i += segment_length) {
+            total_fitness += L[i] * segment_fitness_record[i]; 
+        }
+
+        return total_fitness;
+    
     } else if (method == "weak") {
         // cout << method << "!!" << endl;
         

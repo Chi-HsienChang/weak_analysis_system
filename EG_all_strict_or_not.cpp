@@ -95,7 +95,7 @@ double calculate_fitness(const string& chromosome, const string& method) {
             cout << total_fitness << endl;
         }
         return total_fitness;
-    } else if (method == "leadingone") {
+    } else if (method == "leadingones") {
         // cout << method << "!!" << endl;
         double leading_ones = 0;
         for (char bit : chromosome) {
@@ -111,6 +111,37 @@ double calculate_fitness(const string& chromosome, const string& method) {
             cout << leading_ones << endl;
         }
         return leading_ones;
+    } else if (method == "leadingtraps") {
+        int segment_length = 4;
+
+        std::vector<int> L(chromosome.length(), 0); 
+        L[0] = 1;
+        std::vector<double> segment_fitness_record(chromosome.length(), 0); 
+
+        double segment_fitness = 0.0;
+        for (size_t i = 0; i < chromosome.length(); i += segment_length) {
+            string segment = chromosome.substr(i, min(segment_length, static_cast<int>(chromosome.length() - i)));
+            segment_fitness = calculate_segment_fitness(segment, "trap");
+            segment_fitness_record[i] += segment_fitness;
+
+            if (i == 0)
+            {
+                continue;
+            }
+           
+            if (segment_fitness_record[i-4] == 4 && L[i-4] == 1) {
+                L[i] = 1;
+            }
+            
+        }
+
+        double total_fitness = 0.0;
+        for (size_t i = 0; i < chromosome.length(); i += segment_length) {
+            total_fitness += L[i] * segment_fitness_record[i]; 
+        }
+
+        return total_fitness;
+    
     } else if (method == "weak") {
         // cout << method << "!!" << endl;
         
@@ -761,6 +792,22 @@ int main(int argc, char* argv[]) {
     auto chromosomes = generate_chromosomes(L, method);
 
 
+
+    
+
+    for (int target_index = 0; target_index < L; target_index++) {
+        cout << "S -> " << target_index << endl;
+        
+        std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
+        // cout << "order_1"<< endl;
+        
+        cout <<"in-degree("<<target_index<<") = "<< weak_epi_count_results[1] << " ";
+        
+        cout << endl;
+    }
+    cout << endl;
+
+
     // 排序根據 chom.second 的值由高到低
     sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
         return a.second > b.second; // 由高到低排序
@@ -770,19 +817,6 @@ int main(int argc, char* argv[]) {
     for (const auto& chom : chromosomes) {
         cout << chom.first << " " << chom.second << endl;
     }
-    cout << endl;
-    
-
-    for (int target_index = 0; target_index < L; target_index++) {
-        cout << "S -> " << target_index << endl;
-        
-        std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
-        // cout << "order_0  order_1 order_2 ... order_(ell-1): "<< endl;
-        for (int count : weak_epi_count_results) {
-            cout << count << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
+    cout << endl;    
     return 0;
 }
