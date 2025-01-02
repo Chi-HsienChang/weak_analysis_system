@@ -1,0 +1,3152 @@
+1680
+=== 結果 no_2_epi 的筆數: 630
+=== Combination #1 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #2 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #3 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #4 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #5 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #6 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #7 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #8 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #9 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #10 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #11 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #12 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #13 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #14 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #15 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #16 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #17 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #18 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #19 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #20 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #21 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #22 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #23 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #24 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #25 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #26 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #27 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #28 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #29 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #30 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #31 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #32 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #33 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #34 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #35 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #36 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #37 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #38 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #39 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #40 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #41 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #42 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #43 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #44 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #45 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #46 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #47 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #48 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #49 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #50 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #51 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #52 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #53 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #54 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #55 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #56 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #57 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #58 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #59 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #60 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #61 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #62 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #63 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #64 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #65 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #66 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #67 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #68 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #69 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #70 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #71 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #72 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #73 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #74 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #75 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #76 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #77 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #78 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #79 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #80 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #81 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #82 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #83 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #84 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #85 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #86 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #87 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #88 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #89 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #90 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #91 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #92 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #93 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #94 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #95 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #96 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #97 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #98 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #99 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #100 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #101 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #102 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #103 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #104 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #105 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #106 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #107 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #108 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #109 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #110 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #111 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #112 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #113 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #114 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #115 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #116 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #117 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #118 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #119 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #120 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #121 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #122 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #123 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #124 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #125 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #126 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #127 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #128 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #129 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #130 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #131 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #132 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #133 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #134 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #135 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #136 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #137 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #138 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #139 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #140 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #141 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #142 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #143 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #144 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #145 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #146 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #147 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #148 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #149 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #150 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #151 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #152 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #153 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #154 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #155 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #156 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #157 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #158 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #159 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #160 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #161 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #162 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #163 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #164 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #165 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #166 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #167 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #168 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #169 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #170 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #171 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #172 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #173 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #174 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #175 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #176 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #177 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #178 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #179 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #180 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 2  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #181 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #182 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #183 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #184 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #185 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #186 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #187 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #188 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #189 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #190 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #191 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #192 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #193 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #194 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #195 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #196 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #197 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #198 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #199 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #200 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #201 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #202 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #203 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #204 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #205 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #206 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #207 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #208 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #209 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #210 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #211 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #212 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #213 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #214 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #215 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #216 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #217 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #218 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #219 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #220 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #221 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #222 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #223 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #224 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #225 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #226 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #227 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #228 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #229 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #230 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #231 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #232 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #233 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #234 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #235 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #236 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #237 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #238 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #239 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #240 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #241 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #242 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #243 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #244 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #245 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #246 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #247 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #248 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #249 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #250 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #251 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #252 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #253 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #254 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #255 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #256 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #257 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #258 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #259 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #260 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #261 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #262 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #263 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #264 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #265 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #266 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #267 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #268 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #269 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #270 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #271 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #272 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #273 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #274 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #275 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #276 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #277 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #278 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #279 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #280 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #281 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #282 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #283 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #284 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #285 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #286 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #287 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #288 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #289 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #290 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #291 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #292 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #293 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #294 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #295 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #296 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #297 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #298 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #299 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #300 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #301 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #302 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #303 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #304 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #305 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #306 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #307 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #308 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #309 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #310 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #311 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #312 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #313 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #314 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #315 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #316 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #317 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #318 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #319 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #320 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #321 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #322 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #323 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #324 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #325 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #326 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #327 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #328 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #329 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #330 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #331 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #332 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #333 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #334 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #335 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #336 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #337 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #338 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #339 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #340 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #341 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #342 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #343 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #344 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #345 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #346 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #347 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #348 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #349 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #350 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #351 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #352 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #353 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #354 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #355 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #356 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #357 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #358 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #359 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #360 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 2  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #361 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #362 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #363 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #364 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #365 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #366 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #367 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #368 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #369 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #370 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #371 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #372 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #373 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #374 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #375 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #376 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #377 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #378 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #379 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #380 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #381 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #382 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #383 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #384 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #385 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #386 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #387 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #388 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #389 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #390 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #391 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #392 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #393 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #394 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #395 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #396 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #397 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #398 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #399 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #400 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #401 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #402 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #403 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #404 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #405 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #406 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #407 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #408 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #409 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #410 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #411 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #412 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #413 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #414 ===
+  - 00 rank: 4  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #415 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #416 ===
+  - 00 rank: 6  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #417 ===
+  - 00 rank: 7  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #418 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #419 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #420 ===
+  - 00 rank: 5  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #421 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #422 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #423 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #424 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #425 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #426 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #427 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #428 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #429 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #430 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #431 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #432 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #433 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #434 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #435 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #436 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #437 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #438 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #439 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #440 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #441 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #442 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #443 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #444 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #445 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #446 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #447 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #448 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #449 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #450 ===
+  - 00 rank: 3  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #451 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #452 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #453 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #454 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #455 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #456 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #457 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #458 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #459 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #460 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #461 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #462 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #463 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #464 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #465 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #466 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #467 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #468 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #469 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #470 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #471 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #472 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #473 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #474 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #475 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #476 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #477 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #478 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #479 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #480 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #481 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #482 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #483 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #484 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #485 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #486 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #487 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #488 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #489 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #490 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #491 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #492 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #493 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #494 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #495 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #496 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #497 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #498 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #499 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #500 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #501 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #502 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #503 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #504 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #505 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #506 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #507 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #508 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #509 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #510 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 3  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #511 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #512 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #513 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #514 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #515 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #516 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #517 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #518 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #519 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #520 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #521 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #522 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #523 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #524 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #525 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #526 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #527 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #528 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #529 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #530 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #531 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #532 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #533 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #534 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #535 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #536 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #537 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #538 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #539 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #540 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #541 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #542 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #543 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #544 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #545 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #546 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #547 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #548 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #549 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #550 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #551 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #552 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #553 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #554 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #555 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #556 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #557 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #558 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #559 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #560 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #561 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #562 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #563 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #564 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #565 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #566 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #567 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #568 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #569 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #570 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 3  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #571 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #572 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #573 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #574 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #575 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #576 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #577 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #578 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #579 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #580 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #581 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #582 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #583 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #584 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #585 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #586 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #587 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #588 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #589 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #590 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #591 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #592 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #593 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #594 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #595 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #596 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #597 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #598 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #599 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #600 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #601 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #602 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #603 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #604 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #605 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #606 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #607 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #608 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #609 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #610 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #611 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #612 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 4  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #613 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #614 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #615 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #616 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #617 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #618 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #619 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #620 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #621 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #622 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #623 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #624 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 4  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #625 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #626 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 6  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #627 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 7  item: 101
+  - 10 rank: 5  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #628 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #629 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 6  item: 110
+  - 11 rank: 1  item: 111
+=== Combination #630 ===
+  - 00 rank: 2  item: 100
+  - 01 rank: 5  item: 101
+  - 10 rank: 7  item: 110
+  - 11 rank: 1  item: 111

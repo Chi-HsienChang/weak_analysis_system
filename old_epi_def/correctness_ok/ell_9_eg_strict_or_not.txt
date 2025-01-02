@@ -1,0 +1,91 @@
+S -> 0
+{1 } -> 0 is non-strictly epistatic 
+{2 } -> 0 is non-strictly epistatic 
+{3 } -> 0 is strictly epistatic
+{4 } -> 0 is non-strictly epistatic 
+{5 } -> 0 is non-strictly epistatic 
+{6 } -> 0 is strictly epistatic
+{7 } -> 0 is non-strictly epistatic 
+{8 } -> 0 is non-strictly epistatic 
+0 8 0 0 0 0 0 0 0 
+S -> 1
+{0 } -> 1 is strictly epistatic
+{2 } -> 1 is strictly epistatic
+{3 } -> 1 is strictly epistatic
+{4 } -> 1 is non-strictly epistatic 
+{5 } -> 1 is non-strictly epistatic 
+{6 } -> 1 is strictly epistatic
+{7 } -> 1 is non-strictly epistatic 
+{8 } -> 1 is non-strictly epistatic 
+0 8 0 0 0 0 0 0 0 
+S -> 2
+{0 } -> 2 is strictly epistatic
+{1 } -> 2 is strictly epistatic
+{3 } -> 2 is strictly epistatic
+{4 } -> 2 is non-strictly epistatic 
+{5 } -> 2 is non-strictly epistatic 
+{6 } -> 2 is strictly epistatic
+{7 } -> 2 is non-strictly epistatic 
+{8 } -> 2 is non-strictly epistatic 
+0 8 0 0 0 0 0 0 0 
+S -> 3
+{0 } -> 3 is strictly epistatic
+{1 } -> 3 is non-strictly epistatic 
+{2 } -> 3 is non-strictly epistatic 
+{4 } -> 3 is non-strictly epistatic 
+{5 } -> 3 is non-strictly epistatic 
+{6 } -> 3 is strictly epistatic
+{7 } -> 3 is non-strictly epistatic 
+{8 } -> 3 is non-strictly epistatic 
+0 8 0 0 0 0 0 0 0 
+S -> 4
+{0 } -> 4 is strictly epistatic
+{1 } -> 4 is non-strictly epistatic 
+{2 } -> 4 is non-strictly epistatic 
+{3 } -> 4 is strictly epistatic
+{5 } -> 4 is strictly epistatic
+{6 } -> 4 is strictly epistatic
+{7 } -> 4 is non-strictly epistatic 
+{8 } -> 4 is non-strictly epistatic 
+0 8 0 0 0 0 0 0 0 
+S -> 5
+{0 } -> 5 is strictly epistatic
+{1 } -> 5 is non-strictly epistatic 
+{2 } -> 5 is non-strictly epistatic 
+{3 } -> 5 is strictly epistatic
+{4 } -> 5 is strictly epistatic
+{6 } -> 5 is strictly epistatic
+{7 } -> 5 is non-strictly epistatic 
+{8 } -> 5 is non-strictly epistatic 
+0 8 0 0 0 0 0 0 0 
+S -> 6
+{0 } -> 6 is strictly epistatic
+{1 } -> 6 is non-strictly epistatic 
+{2 } -> 6 is non-strictly epistatic 
+{3 } -> 6 is strictly epistatic
+{4 } -> 6 is non-strictly epistatic 
+{5 } -> 6 is non-strictly epistatic 
+{7 } -> 6 is non-strictly epistatic 
+{8 } -> 6 is non-strictly epistatic 
+0 8 0 0 0 0 0 0 0 
+S -> 7
+{0 } -> 7 is strictly epistatic
+{1 } -> 7 is non-strictly epistatic 
+{2 } -> 7 is non-strictly epistatic 
+{3 } -> 7 is strictly epistatic
+{4 } -> 7 is non-strictly epistatic 
+{5 } -> 7 is non-strictly epistatic 
+{6 } -> 7 is strictly epistatic
+{8 } -> 7 is strictly epistatic
+0 8 0 0 0 0 0 0 0 
+S -> 8
+{0 } -> 8 is strictly epistatic
+{1 } -> 8 is non-strictly epistatic 
+{2 } -> 8 is non-strictly epistatic 
+{3 } -> 8 is strictly epistatic
+{4 } -> 8 is non-strictly epistatic 
+{5 } -> 8 is non-strictly epistatic 
+{6 } -> 8 is strictly epistatic
+{7 } -> 8 is strictly epistatic
+0 8 0 0 0 0 0 0 0 
+
