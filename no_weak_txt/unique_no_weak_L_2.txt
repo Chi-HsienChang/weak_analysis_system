@@ -1,0 +1,36 @@
+----- no weak [0] (unique #1) -----
+{ 1 } -> 0
+{ 0 } -> 1
+
+chromosomes & fitness
+11 4
+00 3
+01 2
+10 1
+
+----- no weak [2] (unique #2) -----
+{ 1 } -> 0
+
+chromosomes & fitness
+11 4
+01 3
+00 2
+10 1
+
+----- no weak [3] (unique #3) -----
+
+chromosomes & fitness
+11 4
+01 3
+10 2
+00 1
+
+----- no weak [4] (unique #4) -----
+{ 0 } -> 1
+
+chromosomes & fitness
+11 4
+10 3
+00 2
+01 1
+
