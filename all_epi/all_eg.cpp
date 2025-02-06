@@ -855,6 +855,9 @@ std::vector<int> count_weak(int L, int target_index, auto chromosomes, const str
     return weak_epi_count;
 }
 
+
+
+
 // Print the matrix
 void print_matrix(const vector<vector<string>>& matrix) {
     for (const auto& row : matrix) {

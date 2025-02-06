@@ -1,0 +1,62 @@
+----- no weak [0] ----- 
+{ 1 } -> 0
+
+{ 0 } -> 1
+
+chromosomes & fitness
+11 4
+00 3
+01 2
+10 1
+
+----- no weak [1] ----- 
+{ 1 } -> 0
+
+{ 0 } -> 1
+
+chromosomes & fitness
+11 4
+00 3
+10 2
+01 1
+
+----- no weak [2] ----- 
+{ 1 } -> 0
+
+
+chromosomes & fitness
+11 4
+01 3
+00 2
+10 1
+
+----- no weak [3] ----- 
+
+
+chromosomes & fitness
+11 4
+01 3
+10 2
+00 1
+
+----- no weak [4] ----- 
+
+{ 0 } -> 1
+
+chromosomes & fitness
+11 4
+10 3
+00 2
+01 1
+
+----- no weak [5] ----- 
+
+
+chromosomes & fitness
+11 4
+10 3
+01 2
+00 1
+
+Total permutations = 6
+# no_weak_id = 6
