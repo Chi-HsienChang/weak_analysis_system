@@ -1397,6 +1397,49 @@ vector<pair<string, double>> sample_chromosomes(const vector<pair<string, double
     return sampled_chromosomes;
 }
 
+void process_permutation(vector<pair<string, double>>& chromosomes) {
+    static int no_weak_id = 0; // 用來標記無弱相互作用的計數器
+    int L = chromosomes[0].first.size(); // 染色體長度
+    string method = "onemax"; // 可改為你要的計算適應值的方法
+
+    bool all_no_weak = true; // 假設所有目標位點都沒有弱相互作用
+
+    for (int target_index = 0; target_index < L; target_index++) {
+        std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
+
+        for (int i = 2; i < L; i++) {
+            if (weak_epi_count_results[i] > 0) {
+                all_no_weak = false;
+                break;
+            }
+        }
+
+        if (!all_no_weak) break;
+    }
+
+    if (all_no_weak) {
+        cout << "----- no weak [" << no_weak_id << "] ----- " << endl;
+        no_weak_id++;
+
+        // 計算所有目標位點的強相互作用
+        for (int target_index = 0; target_index < L; target_index++) {
+            std::vector<int> epi_count_results = count_epi(L, target_index, chromosomes, method);
+        }
+
+        // 根據 fitness 排序
+        sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
+            return a.second > b.second;
+        });
+
+        cout << "Chromosomes & Fitness" << endl;
+        for (const auto& chom : chromosomes) {
+            cout << chom.first << " " << chom.second << endl;
+        }
+        cout << endl;
+    }
+}
+
+
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         cerr << "Usage: " << argv[0] << " <Problem Length L> <Fitness Method>" << endl;
@@ -1407,116 +1450,141 @@ int main(int argc, char* argv[]) {
     string method = argv[2];
     int n = pow(2, L);
 
-    auto chromosomes = generate_chromosomes_emu(L, method);
 
-    // 2. 找到「最佳解」(假設 fitness 越大越好)
-    //    max_element 回傳一個 iterator，指向適應值最大的元素
+    //---------------------------------------------
+    // 1) 先取得全部 2^L 條 (chromosome, fitness)
+    //---------------------------------------------
+    vector<pair<string, double>> base_chromosomes = generate_chromosomes_emu(L, method);
+
+    //---------------------------------------------
+    // 2) 找出 "最佳解" (fitness 最大)，並取出
+    //---------------------------------------------
     auto it_best = max_element(
-        chromosomes.begin(), chromosomes.end(),
+        base_chromosomes.begin(), base_chromosomes.end(),
         [](auto &a, auto &b) {
+            // fitness 越大越好
             return a.second < b.second;
         }
     );
-    auto best_chromosome = *it_best; // (string, fitness)
+    auto best_chromosome = *it_best; // (string, double)
 
-    cout << "Best chromosome = " << best_chromosome.first
-         << ", fitness = " << best_chromosome.second << endl << endl;
+    // 把它從 base_chromosomes 裡面移除，但我們要保留以後用
+    base_chromosomes.erase(it_best);
 
-    // 3. 將最佳解從陣列中移除
-    chromosomes.erase(it_best);
+    // cout << "Best chromosome = " << best_chromosome.first
+    //      << ", fitness = " << best_chromosome.second << "\n\n";
 
-    //   為了方便使用 next_permutation，需要先排序；否則 next_permutation
-    //   無法產出所有排列。
-    //   排序時可以用「fitness」再加上「字串」當 tie-breaker
-    sort(
-        chromosomes.begin(), chromosomes.end(),
-        [](auto &a, auto &b) {
-            if (a.second != b.second) {
-                return a.second < b.second; // 按 fitness 升序
-            }
-            return a.first < b.first;      // 如有相同 fitness，按字串排序
-        }
-    );
+    // 現在 base_chromosomes 有 (2^L - 1) 條
 
-    // 4. 對剩下的染色體做所有排列
-    long long count = 0;
+    //---------------------------------------------
+    // 3) 對剩下的 (2^L - 1) 條染色體做排序
+    //    （為了配合 next_permutation）
+    //---------------------------------------------
+    sort(base_chromosomes.begin(), base_chromosomes.end(),
+         [](auto &a, auto &b) {
+             if (a.second != b.second) return a.second < b.second; 
+             return a.first < b.first;
+         });
+
+    //---------------------------------------------
+    // 4) 開始枚舉所有排列，並把 "最佳解" 放在最前面
+    //---------------------------------------------
+    vector<vector<pair<string, double>>> all_chromosomes; 
+    long long permutation_count = 0;
+
     do {
-        ++count;
+        permutation_count++;
 
-        // 在此可以做你要的處理，以下只是示範印出順序
-        cout << "Permutation " << count << ": [ " << best_chromosome.first << " (best), ";
-        for (int i = 0; i < (int)chromosomes.size(); ++i) {
-            cout << chromosomes[i].first;
-            if (i < (int)chromosomes.size() - 1) cout << ", ";
+        // 每個 permutation，先把 "best" 放在第一個
+        vector<pair<string, double>> this_perm;
+        this_perm.push_back(best_chromosome);
+
+        for (auto &c : base_chromosomes) {
+            this_perm.push_back(c);
         }
-        cout << " ]" << endl;
 
-        // 如果需要把 best_chromosome 也混進去做某些運算，可以在這裡操作
-        // 例如計算整個群體的一些統計量等等。
+        // 在這裡直接處理 `this_perm`，避免存入 `all_chromosomes`
+        for (int i = 0; i < this_perm.size(); i++) {
+            this_perm[i].second = this_perm.size() - i;
+        }
+
+        // 這裡執行你的分析，不儲存到 `all_chromosomes`
+        process_permutation(this_perm); // 這是你用來分析 `this_perm` 的函數
+
         
+
     } while (next_permutation(
-                 chromosomes.begin(), chromosomes.end(),
+                 base_chromosomes.begin(),
+                 base_chromosomes.end(),
                  [](auto &a, auto &b) {
-                     if (a.second != b.second) {
-                         return a.second < b.second;
-                     }
+                     if (a.second != b.second) return a.second < b.second;
                      return a.first < b.first;
                  }
              ));
 
-    cout << "\nTotal permutations (excluding the best chromosome) = " << count << endl;
 
+    // cout << "all_chromosomes.size() = " << all_chromosomes.size() << endl;
 
-    cout << "============== weak epi ================="<< endl;
+    // int no_weak_id = 0;
+    // for(int emu_i = 0; emu_i < all_chromosomes.size(); emu_i++){
 
-    bool all_no_weak = true;
-    for (int target_index = 0; target_index < L; target_index++) {
-        std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
+    //     auto chromosomes = all_chromosomes[emu_i];
 
-        // bool is_weak = false;
-        for (int i = 2; i < L; i++) {
-            if(weak_epi_count_results[i] > 0){
-                cout << "S -> " << target_index << endl;
-                all_no_weak = false;
-                cout << "exist weak with " << "|S| = "<< i << " "<<endl;
-                // is_weak = true;
-            }  
-        }
-    }
+    //     // cout << "============== weak epi ================="<< endl;
 
-    if (all_no_weak)
-    {
-        cout << "no weak epi" << endl;
-    }
+    //     bool all_no_weak = true;
+    //     for (int target_index = 0; target_index < L; target_index++) {
+    //         std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
 
-    // cout << "============== all epi ================="<< endl;
-    // for (int target_index = 0; target_index < L; target_index++) {
-    //     cout << "S -> " << target_index << endl;
-        
-    //     std::vector<int> epi_count_results = count_epi(L, target_index, chromosomes, method);
-
-    //     for (int i = 1; i < L; i++)
-    //     {
-    //         cout << epi_count_results[i] << " ";
+    //         // bool is_weak = false;
+    //         for (int i = 2; i < L; i++) {
+    //             if(weak_epi_count_results[i] > 0){
+    //                 // cout << "S -> " << target_index << endl;
+    //                 // cout << "exist weak with " << "|S| = "<< i << " "<<endl;
+    //                 all_no_weak = false;
+    //                 // is_weak = true;
+    //             }  
+    //         }
     //     }
-        
-    //     // for (int count : epi_count_results) {
-    //     //     cout << count << " ";
-    //     // }
-    //     cout << endl;
-    // }
-    // cout << endl;
-    // cout << endl;
 
-    // // 排序根據 chom.second 的值由高到低
-    // sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
-    //     return a.second > b.second; // 由高到低排序
-    // });
+    //     if (all_no_weak)
+    //     {
+    //         cout << "----- no weak ["<< no_weak_id << "] ----- " << endl;
+    //         no_weak_id++;
+    //         // cout << "============== all epi ================="<< endl;
+    //         for (int target_index = 0; target_index < L; target_index++) {
+    //             // cout << "S -> " << target_index << endl;
+                
+    //             std::vector<int> epi_count_results = count_epi(L, target_index, chromosomes, method);
 
-    // cout << "chromosomes & fitness" << endl;
-    // for (const auto& chom : chromosomes) {
-    //     cout << chom.first << " " << chom.second << endl;
+    //             // for (int i = 1; i < L; i++)
+    //             // {
+    //             //     cout << epi_count_results[i] << " ";
+    //             // }
+                
+    //             // for (int count : epi_count_results) {
+    //             //     cout << count << " ";
+    //             // }
+    //             cout << endl;
+    //         }
+    //         // cout << endl;
+    //         // cout << endl;
+
+    //         // 排序根據 chom.second 的值由高到低
+    //         sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
+    //             return a.second > b.second; // 由高到低排序
+    //         });
+
+    //         cout << "chromosomes & fitness" << endl;
+    //         for (const auto& chom : chromosomes) {
+    //             cout << chom.first << " " << chom.second << endl;
+    //         }
+    //         cout << endl;
+
+    //         }
     // }
-    // cout << endl;
+
+    cout << "Total permutations = " << permutation_count << endl;
+    // cout << "# no_weak_id = " << no_weak_id << endl;
     return 0;
 }

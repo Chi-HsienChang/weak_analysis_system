@@ -1465,6 +1465,10 @@ int main(int argc, char* argv[]) {
         // 也就是包含最佳解 + 其餘染色體
         all_chromosomes.push_back(this_perm);
 
+        if (all_chromosomes.size() > 10){
+            break;
+        }
+
     } while (next_permutation(
                  base_chromosomes.begin(),
                  base_chromosomes.end(),
