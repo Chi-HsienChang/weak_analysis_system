@@ -594,9 +594,6 @@ bool check_constrained_optima(int target_index, auto combination, auto enumerati
     }
 }
 
-
-
-
 int check_weak(int target_index, auto combination, auto enumerations, auto chromosomes) {
 
     // cout << "==================" << endl;
@@ -790,8 +787,6 @@ int check_weak(int target_index, auto combination, auto enumerations, auto chrom
 
     return 0;
 }
-
-
 
 std::vector<int> count_weak(int L, int target_index, auto chromosomes, const string& method)
 {
