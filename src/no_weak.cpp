@@ -12,6 +12,29 @@ using namespace std;
 std::pair<std::set<char>, std::vector<std::string>> check_constraint_epi(int target_index, auto combination, auto enumeration, auto chromosomes){
     std::set<char> values_at_v;
     std::vector<std::string> highest_fitness_chromosomes;
+
+    // if (DEBUG){
+    //     cout << endl;
+    //     cout << "++++++++++++ in check_constraint ++++++++++++" << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout << "locus =  ";
+    //     for (const auto& elem : combination) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout << "allele =  ";
+    //     for (const auto& elem : enumeration) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }   
     
     double max_fitness = -1;
     for (const auto& chromosome : chromosomes) 
@@ -50,9 +73,49 @@ std::pair<std::set<char>, std::vector<std::string>> check_constraint_epi(int tar
                 highest_fitness_chromosomes.push_back(chromosome.first);
             } 
 
+            // if (DEBUG){
+            //     cout << "constraint = ";
+            //     int _index = 0;
+            //     for (int i : combination)
+            //     {
+            //         cout << "(" << i << ", " << enumeration[_index] << ") ";
+            //         _index++;
+            //     cout << endl;
+            //     }
+            //     cout << chromosome.first << endl;
+            // }
         }         
     
     }
+
+
+
+    // if (DEBUG)
+    // {
+    //     cout << "highest_fitness_chromosomes: ";
+    //     for (const auto& elem : highest_fitness_chromosomes) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout<<"max_fitness = " << max_fitness << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout << "values_at_v: ";
+    //     for (const auto& elem : values_at_v) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // if (DEBUG){
+    //     cout << "++++++++++++ out check_constraint ++++++++++++" << endl;
+    // }
 
     return {values_at_v, highest_fitness_chromosomes};
 
@@ -60,25 +123,133 @@ std::pair<std::set<char>, std::vector<std::string>> check_constraint_epi(int tar
 
 bool check_constrained_optima_epi(int target_index, auto combination, auto enumeration_original, auto combination_wo, auto enumeration_wo, auto chromosomes){
 
+        // if (DEBUG)
+        // {
+        //     cout << "A =  ";
+        //     for (const auto& elem : enumeration_original) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;
+        // }
+
+        // if (DEBUG)
+        // {
+        //     cout << "B =  ";
+        //     for (const auto& elem : enumeration) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;
+        // }
+
+
     auto constrained_optima_original = check_constraint_epi(target_index, combination, enumeration_original, chromosomes);
+
     auto constrained_optima_flip = check_constraint_epi(target_index, combination_wo, enumeration_wo, chromosomes);
+
+
 
 
     if (constrained_optima_original.first != constrained_optima_flip.first) {
 
-        if (!constrained_optima_original.first.empty() && !constrained_optima_flip.first.empty()){ 
+        if (!constrained_optima_original.first.empty() && !constrained_optima_flip.first.empty()){
+
+            // if (DEBUG)
+            // {
+            //     cout << "constrained_optima_original.first: ";
+            //     for (const auto& elem : constrained_optima_original.first) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;
+            // }
+
+            // if (DEBUG)
+            // {
+            //     cout << "constrained_optima_flip.first: ";
+            //     for (const auto& elem : constrained_optima_flip.first) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;
+            // }
+
+
+            //////
+            // cout << "{";
+            // for (const auto& elem : combination) {
+            //     cout << elem << " ";
+            // }
+            // cout << "} -> "<< target_index << endl;
+
+            // cout << "omega_A_pattern: ";
+            // for (const auto& elem : constrained_optima_original.second) {
+            //     cout << elem << endl;
+            // }
+
+            // cout << "omega_B_pattern: ";
+            // for (const auto& elem : constrained_optima_flip.second) {
+            //     cout << elem << endl;
+            // }
+
+            // cout << "omega_A_[target_index] = ";
+            // for (const auto& elem : constrained_optima_original.first) {
+            //     cout << elem << " ";
+            // }
+            // cout << endl;   
+
+            // cout << "omega_B_[target_index] = ";
+            // for (const auto& elem : constrained_optima_flip.first) {
+            //     cout << elem << " ";
+            // }
+            // cout << endl;    
+            // cout << endl;  
             return true;
         }
         else{
             return false;
         }
     }else{
+        // cout << "{";
+        // for (const auto& elem : combination) {
+        //     cout << elem << " ";
+        // }
+        // cout << "} !-> "<< target_index << endl;
+
+        // cout << "omega_A_pattern: ";
+        // for (const auto& elem : constrained_optima_original.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_B_pattern: ";
+        // for (const auto& elem : constrained_optima_flip.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_A_[target_index] = ";
+        // for (const auto& elem : constrained_optima_original.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;   
+
+        // cout << "omega_B_[target_index] = ";
+        // for (const auto& elem : constrained_optima_flip.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;    
+        // cout << endl;        
         return false;
     }
 }
 
 int check_epi(int target_index, auto combination, auto enumerations, auto chromosomes) {
 
+    // cout << "==================" << endl;
+    // cout << "combination: ";
+    // for (const auto& elem : combination) {
+    //     cout << elem << " ";
+    // }
+    // cout << endl;
+    
+
+    // auto enumeration_original = enumeration;
     int condition_holds = 0;
     for (int condition_index = 0; condition_index < combination.size(); condition_index++)
     {
@@ -91,6 +262,30 @@ int check_epi(int target_index, auto combination, auto enumerations, auto chromo
             auto enumeration_wo = enumeration;
             combination_wo.erase(combination_wo.begin() + condition_index);
             enumeration_wo.erase(enumeration_wo.begin() + condition_index);
+
+            // cout << "combination: ";
+            // for (const auto& elem : combination) {
+            //     cout << elem << " ";
+            // }   
+            // cout<<endl;
+
+            // cout << "combination_wo: ";
+            // for (const auto& elem : combination_wo) {
+            //     cout << elem << " ";
+            // }
+            // cout<<endl;
+
+            // cout << "enumeration: ";
+            // for (const auto& elem : enumeration) {
+            //     cout << elem << " ";
+            // }
+            // cout<<endl;
+
+            // cout << "enumeration_wo: ";
+            // for (const auto& elem : enumeration_wo) {
+            //     cout << elem << " ";
+            // }
+            // cout<<endl;
             
             bool not_equal;
             not_equal = check_constrained_optima_epi(target_index, combination, enumeration_original, combination_wo, enumeration_wo, chromosomes);
@@ -114,8 +309,126 @@ int check_epi(int target_index, auto combination, auto enumerations, auto chromo
                 cout << "} -> "<< target_index << endl;           
             }
 
+            // if (DEBUG){
+            //     cout << "--------------------------------------" << endl;
+            //     cout << "enumeration_original" << endl;
+            //     for (const auto& elem : enumeration_original) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;          
+            // }
             return 1;
         }
+
+
+    // if (DEBUG){
+    //     cout << endl;
+    //     cout << "---------- in check_weak --------------" << endl;
+    // }
+
+
+    // if (DEBUG)
+    // {
+    //     cout << "current combination index is ";
+    //     for (const auto& elem : combination) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+    
+    
+    
+    // if (DEBUG)
+    // {
+    //     cout << "current enumeration is ";
+    //     for (const auto& elem : enumeration) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // cout << "current combination index is ";
+    // for (const auto& elem : combination) {
+    //     cout << elem << " ";
+    // }
+    // cout << endl;
+
+    // cout << "current enumeration is ";
+    // for (const auto& elem : enumeration) {
+    //     cout << elem << " ";
+    // }
+    // cout << "target_index = "<< target_index <<endl;
+
+
+    // auto enumeration_original = enumeration;
+    // int condition_holds = 0;
+    // for (int condition_index = 0; condition_index < enumeration.size(); condition_index++)
+    // {
+    //     // cout << "--------------------------------------" << endl;
+    //     // cout << "enumeration_original" << endl;
+    //     // for (const auto& elem : enumeration_original) {
+    //     //     cout << elem << " ";
+    //     // }
+    //     // cout << endl;
+
+    //     enumeration = enumeration_original;
+    //     enumeration[condition_index] = 1 - enumeration[condition_index]; // flip bit 
+
+    //     // if (DEBUG)
+    //     // {
+    //     //     cout << "A =  ";
+    //     //     for (const auto& elem : enumeration_original) {
+    //     //         cout << elem << " ";
+    //     //     }
+    //     //     cout << endl;
+    //     // }
+
+    //     // if (DEBUG)
+    //     // {
+    //     //     cout << "B =  ";
+    //     //     for (const auto& elem : enumeration) {
+    //     //         cout << elem << " ";
+    //     //     }
+    //     //     cout << endl;
+    //     // }
+        
+    //     bool not_equal;
+    //     not_equal = check_constrained_optima(target_index, combination, enumeration_original, enumeration, chromosomes);
+    //     // cout << "not_equal: " << not_equal << endl;
+    //     // cout << "######################################" << endl;
+
+    //     if (not_equal)
+    //     {
+    //         condition_holds++;
+    //     }else{
+    //         return 0;
+    //     }
+    // }
+
+    // if (condition_holds == enumeration.size())
+    // {
+    //     if (DEBUG){  
+    //         cout << "{";
+    //         for (const auto& elem : combination) {
+    //             cout << elem << " ";
+    //         }
+    //         cout << "} -> "<< target_index << endl;           
+    //     }
+
+        // if (DEBUG){
+        //     cout << "--------------------------------------" << endl;
+        //     cout << "enumeration_original" << endl;
+        //     for (const auto& elem : enumeration_original) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;          
+        // }
+    //     return 1;
+    // }
+
+    // if (DEBUG){
+    //     cout << "---------- out check_weak --------------" << endl;
+    // }
 
     return 0;
 }
@@ -196,10 +509,25 @@ double calculate_onemax_weak3(const string& segment, const string& method) {
 // Calculate the fitness of a chromosome based on the selected method
 double calculate_fitness(const string& chromosome, const string& method) {
     if (method == "onemax") {
+        // if (DEBUG)
+        // {
+        //     cout << chromosome << endl;
+        //     cout << count(chromosome.begin(), chromosome.end(), '1') << endl;
+        // }
         return count(chromosome.begin(), chromosome.end(), '1');
     } else if (method == "trap") {
+        // if (DEBUG)
+        // {
+        //     cout << chromosome << endl;
+        //     cout << calculate_segment_fitness(chromosome, "trap") << endl;
+        // }
         return calculate_segment_fitness(chromosome, "trap");
     } else if (method == "niah") {
+        // if (DEBUG)
+        // {
+        //     cout << chromosome << endl;
+        //     cout << calculate_segment_fitness(chromosome, "niah") << endl;
+        // }
         return calculate_segment_fitness(chromosome, "niah");
     } else if (method == "ctrap" || method == "cniah") {
         int segment_length = 4;
@@ -454,6 +782,31 @@ std::pair<std::set<char>, std::vector<std::string>> check_constraint(int target_
     std::set<char> values_at_v;
     std::vector<std::string> highest_fitness_chromosomes;
 
+    // if (DEBUG){
+    //     cout << endl;
+    //     cout << "++++++++++++ in check_constraint ++++++++++++" << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout << "locus =  ";
+    //     for (const auto& elem : combination) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout << "allele =  ";
+    //     for (const auto& elem : enumeration) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }   
+    
+
+
     double max_fitness = -1;
     for (const auto& chromosome : chromosomes) 
     {
@@ -461,6 +814,9 @@ std::pair<std::set<char>, std::vector<std::string>> check_constraint(int target_
         int enumeration_index = 0;
         for (int i : combination)
         {
+            // cout << "note chromosome.first[i]: " << chromosome.first[i] << endl;
+            // cout << "enumeration[i]: " << enumeration[enumeration_index] << endl;
+
             if (chromosome.first[i] - '0' != enumeration[enumeration_index]){
                 fit_constraint = false;
                 // cout << "不一樣" << chromosome.first[i] << endl;
@@ -487,9 +843,50 @@ std::pair<std::set<char>, std::vector<std::string>> check_constraint(int target_
                 values_at_v.insert(chromosome.first[target_index]);
                 highest_fitness_chromosomes.push_back(chromosome.first);
             } 
+
+            // if (DEBUG){
+            //     cout << "constraint = ";
+            //     int _index = 0;
+            //     for (int i : combination)
+            //     {
+            //         cout << "(" << i << ", " << enumeration[_index] << ") ";
+            //         _index++;
+            //     cout << endl;
+            //     }
+            //     cout << chromosome.first << endl;
+            // }
         }         
     
     }
+
+
+
+    // if (DEBUG)
+    // {
+    //     cout << "highest_fitness_chromosomes: ";
+    //     for (const auto& elem : highest_fitness_chromosomes) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout<<"max_fitness = " << max_fitness << endl;
+    // }
+
+    // if (DEBUG)
+    // {
+    //     cout << "values_at_v: ";
+    //     for (const auto& elem : values_at_v) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // if (DEBUG){
+    //     cout << "++++++++++++ out check_constraint ++++++++++++" << endl;
+    // }
 
     return {values_at_v, highest_fitness_chromosomes};
 
@@ -498,18 +895,118 @@ std::pair<std::set<char>, std::vector<std::string>> check_constraint(int target_
 
 bool check_constrained_optima(int target_index, auto combination, auto enumeration_original, auto combination_wo, auto enumeration_wo, auto chromosomes){
 
+        // if (DEBUG)
+        // {
+        //     cout << "A =  ";
+        //     for (const auto& elem : enumeration_original) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;
+        // }
+
+        // if (DEBUG)
+        // {
+        //     cout << "B =  ";
+        //     for (const auto& elem : enumeration) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;
+        // }
+
+
     auto constrained_optima_original = check_constraint(target_index, combination, enumeration_original, chromosomes);
+
     auto constrained_optima_flip = check_constraint(target_index, combination_wo, enumeration_wo, chromosomes);
+
+
+
 
     if (constrained_optima_original.first != constrained_optima_flip.first) {
 
-        if (!constrained_optima_original.first.empty() && !constrained_optima_flip.first.empty()){  
+        if (!constrained_optima_original.first.empty() && !constrained_optima_flip.first.empty()){
+
+            // if (DEBUG)
+            // {
+            //     cout << "constrained_optima_original.first: ";
+            //     for (const auto& elem : constrained_optima_original.first) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;
+            // }
+
+            // if (DEBUG)
+            // {
+            //     cout << "constrained_optima_flip.first: ";
+            //     for (const auto& elem : constrained_optima_flip.first) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;
+            // }
+
+
+            //////
+            // cout << "{";
+            // for (const auto& elem : combination) {
+            //     cout << elem << " ";
+            // }
+            // cout << "} -> "<< target_index << endl;
+
+            // cout << "omega_A_pattern: ";
+            // for (const auto& elem : constrained_optima_original.second) {
+            //     cout << elem << endl;
+            // }
+
+            // cout << "omega_B_pattern: ";
+            // for (const auto& elem : constrained_optima_flip.second) {
+            //     cout << elem << endl;
+            // }
+
+            // cout << "omega_A_[target_index] = ";
+            // for (const auto& elem : constrained_optima_original.first) {
+            //     cout << elem << " ";
+            // }
+            // cout << endl;   
+
+            // cout << "omega_B_[target_index] = ";
+            // for (const auto& elem : constrained_optima_flip.first) {
+            //     cout << elem << " ";
+            // }
+            // cout << endl;    
+            // cout << endl;  
             return true;
         }
         else{
             return false;
         }
-    }else{     
+    }else{
+        // cout << "{";
+        // for (const auto& elem : combination) {
+        //     cout << elem << " ";
+        // }
+        // cout << "} !-> "<< target_index << endl;
+
+        // cout << "omega_A_pattern: ";
+        // for (const auto& elem : constrained_optima_original.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_B_pattern: ";
+        // for (const auto& elem : constrained_optima_flip.second) {
+        //     cout << elem << endl;
+        // }
+
+        // cout << "omega_A_[target_index] = ";
+        // for (const auto& elem : constrained_optima_original.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;   
+
+        // cout << "omega_B_[target_index] = ";
+        // for (const auto& elem : constrained_optima_flip.first) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;    
+        // cout << endl;        
         return false;
     }
 }
@@ -526,6 +1023,12 @@ std::vector<int> count_epi(int L, int target_index, auto chromosomes, const stri
 
         for (auto& combination : combinations) // combination = [1, 2]
         { 
+            // cout << "combination!!!!! ";
+            // for (const auto& elem : combination) {
+            //     cout << elem << " ";
+            // }
+            // cout << endl;
+
             bool not_find_smaller_epi;
 
             if (epi_size == 1)
@@ -537,8 +1040,16 @@ std::vector<int> count_epi(int L, int target_index, auto chromosomes, const stri
                 bool is_subset;
                 while(not_find_smaller_epi && smaller_epi_size>=1)
                 {   
+                    // cout << "previous:" << endl;
                     for (auto& previous : weak_epi_set[smaller_epi_size-1]) 
                     {
+                        // cout << "previous" << endl;
+
+                        // for (const auto& elem : previous) {
+                        //     cout << elem << " ";
+                        // }
+                        // cout<<endl;
+
                         is_subset = isSubset(previous, combination);
                         not_find_smaller_epi = !is_subset;
                         if(is_subset) break;
@@ -569,6 +1080,14 @@ std::vector<int> count_epi(int L, int target_index, auto chromosomes, const stri
 
 int check_weak(int target_index, auto combination, auto enumerations, auto chromosomes) {
 
+    // cout << "==================" << endl;
+    // cout << "combination: ";
+    // for (const auto& elem : combination) {
+    //     cout << elem << " ";
+    // }
+    // cout << endl;
+    
+
     // auto enumeration_original = enumeration;
     int condition_holds = 0;
     for (int condition_index = 0; condition_index < combination.size(); condition_index++)
@@ -582,6 +1101,30 @@ int check_weak(int target_index, auto combination, auto enumerations, auto chrom
             auto enumeration_wo = enumeration;
             combination_wo.erase(combination_wo.begin() + condition_index);
             enumeration_wo.erase(enumeration_wo.begin() + condition_index);
+
+            // cout << "combination: ";
+            // for (const auto& elem : combination) {
+            //     cout << elem << " ";
+            // }   
+            // cout<<endl;
+
+            // cout << "combination_wo: ";
+            // for (const auto& elem : combination_wo) {
+            //     cout << elem << " ";
+            // }
+            // cout<<endl;
+
+            // cout << "enumeration: ";
+            // for (const auto& elem : enumeration) {
+            //     cout << elem << " ";
+            // }
+            // cout<<endl;
+
+            // cout << "enumeration_wo: ";
+            // for (const auto& elem : enumeration_wo) {
+            //     cout << elem << " ";
+            // }
+            // cout<<endl;
             
             bool not_equal;
             not_equal = check_constrained_optima(target_index, combination, enumeration_original, combination_wo, enumeration_wo, chromosomes);
@@ -604,8 +1147,127 @@ int check_weak(int target_index, auto combination, auto enumerations, auto chrom
                 // }
                 // cout << "} -> "<< target_index << endl;           
             }
+
+            // if (DEBUG){
+            //     cout << "--------------------------------------" << endl;
+            //     cout << "enumeration_original" << endl;
+            //     for (const auto& elem : enumeration_original) {
+            //         cout << elem << " ";
+            //     }
+            //     cout << endl;          
+            // }
             return 1;
         }
+
+
+    // if (DEBUG){
+    //     cout << endl;
+    //     cout << "---------- in check_weak --------------" << endl;
+    // }
+
+
+    // if (DEBUG)
+    // {
+    //     cout << "current combination index is ";
+    //     for (const auto& elem : combination) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+    
+    
+    
+    // if (DEBUG)
+    // {
+    //     cout << "current enumeration is ";
+    //     for (const auto& elem : enumeration) {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // cout << "current combination index is ";
+    // for (const auto& elem : combination) {
+    //     cout << elem << " ";
+    // }
+    // cout << endl;
+
+    // cout << "current enumeration is ";
+    // for (const auto& elem : enumeration) {
+    //     cout << elem << " ";
+    // }
+    // cout << "target_index = "<< target_index <<endl;
+
+
+    // auto enumeration_original = enumeration;
+    // int condition_holds = 0;
+    // for (int condition_index = 0; condition_index < enumeration.size(); condition_index++)
+    // {
+    //     // cout << "--------------------------------------" << endl;
+    //     // cout << "enumeration_original" << endl;
+    //     // for (const auto& elem : enumeration_original) {
+    //     //     cout << elem << " ";
+    //     // }
+    //     // cout << endl;
+
+    //     enumeration = enumeration_original;
+    //     enumeration[condition_index] = 1 - enumeration[condition_index]; // flip bit 
+
+    //     // if (DEBUG)
+    //     // {
+    //     //     cout << "A =  ";
+    //     //     for (const auto& elem : enumeration_original) {
+    //     //         cout << elem << " ";
+    //     //     }
+    //     //     cout << endl;
+    //     // }
+
+    //     // if (DEBUG)
+    //     // {
+    //     //     cout << "B =  ";
+    //     //     for (const auto& elem : enumeration) {
+    //     //         cout << elem << " ";
+    //     //     }
+    //     //     cout << endl;
+    //     // }
+        
+    //     bool not_equal;
+    //     not_equal = check_constrained_optima(target_index, combination, enumeration_original, enumeration, chromosomes);
+    //     // cout << "not_equal: " << not_equal << endl;
+    //     // cout << "######################################" << endl;
+
+    //     if (not_equal)
+    //     {
+    //         condition_holds++;
+    //     }else{
+    //         return 0;
+    //     }
+    // }
+
+    // if (condition_holds == enumeration.size())
+    // {
+    //     if (DEBUG){  
+    //         cout << "{";
+    //         for (const auto& elem : combination) {
+    //             cout << elem << " ";
+    //         }
+    //         cout << "} -> "<< target_index << endl;           
+    //     }
+
+        // if (DEBUG){
+        //     cout << "--------------------------------------" << endl;
+        //     cout << "enumeration_original" << endl;
+        //     for (const auto& elem : enumeration_original) {
+        //         cout << elem << " ";
+        //     }
+        //     cout << endl;          
+        // }
+    //     return 1;
+    // }
+
+    // if (DEBUG){
+    //     cout << "---------- out check_weak --------------" << endl;
+    // }
 
     return 0;
 }
@@ -622,6 +1284,12 @@ std::vector<int> count_weak(int L, int target_index, auto chromosomes, const str
 
         for (auto& combination : combinations) // combination = [1, 2]
         { 
+            // cout << "combination!!!!! ";
+            // for (const auto& elem : combination) {
+            //     cout << elem << " ";
+            // }
+            // cout << endl;
+
             bool not_find_smaller_epi;
 
             if (epi_size == 1)
@@ -636,6 +1304,13 @@ std::vector<int> count_weak(int L, int target_index, auto chromosomes, const str
                     // cout << "previous:" << endl;
                     for (auto& previous : weak_epi_set[smaller_epi_size-1]) 
                     {
+                        // cout << "previous" << endl;
+
+                        // for (const auto& elem : previous) {
+                        //     cout << elem << " ";
+                        // }
+                        // cout<<endl;
+
                         is_subset = isSubset(previous, combination);
                         not_find_smaller_epi = !is_subset;
                         if(is_subset) break;
@@ -655,6 +1330,8 @@ std::vector<int> count_weak(int L, int target_index, auto chromosomes, const str
                     weak_epi_set[epi_size].push_back(combination);
                     // break;
                 }
+            
+            
             }
         }
     }
@@ -671,6 +1348,7 @@ void print_matrix(const vector<vector<string>>& matrix) {
         cout << endl;
     }
 }
+
 
 //----------------- 自行依需求修改的適應值計算函式 -------------------
 double calculate_fitness_emu(const string &chromosome, const string &method) {
@@ -718,51 +1396,6 @@ vector<pair<string, double>> sample_chromosomes(const vector<pair<string, double
 
     return sampled_chromosomes;
 }
-
-void process_permutation(vector<pair<string, double>>& chromosomes) {
-    static int no_weak_id = 0; // 用來標記無弱相互作用的計數器
-    int L = chromosomes[0].first.size(); // 染色體長度
-    string method = "onemax"; // 可改為你要的計算適應值的方法
-
-    bool all_no_weak = true; // 假設所有目標位點都沒有弱相互作用
-
-    for (int target_index = 0; target_index < L; target_index++) {
-        std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
-
-        for (int i = 2; i < L; i++) {
-            if (weak_epi_count_results[i] > 0) {
-                all_no_weak = false;
-                break;
-            }
-        }
-
-        if (!all_no_weak) break;
-    }
-
-    if (all_no_weak) {
-        cout << "----- no weak [" << no_weak_id << "] ----- " << endl;
-        no_weak_id++;
-
-        // 計算所有目標位點的強相互作用
-        for (int target_index = 0; target_index < L; target_index++) {
-            std::vector<int> epi_count_results = count_epi(L, target_index, chromosomes, method);
-        }
-
-        // 根據 fitness 排序
-        sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
-            return a.second > b.second;
-        });
-
-        cout << endl;
-
-        cout << "Chromosomes & Fitness" << endl;
-        for (const auto& chom : chromosomes) {
-            cout << chom.first << " " << chom.second << endl;
-        }
-        cout << endl;
-    }
-}
-
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
@@ -823,19 +1456,18 @@ int main(int argc, char* argv[]) {
         vector<pair<string, double>> this_perm;
         this_perm.push_back(best_chromosome);
 
+        // 接著再依序放入當前排列的染色體
         for (auto &c : base_chromosomes) {
             this_perm.push_back(c);
         }
 
-        // 在這裡直接處理 `this_perm`，避免存入 `all_chromosomes`
-        for (int i = 0; i < this_perm.size(); i++) {
-            this_perm[i].second = this_perm.size() - i;
+        // 現在 this_perm.size() = (2^L - 1) + 1 = 2^L
+        // 也就是包含最佳解 + 其餘染色體
+        all_chromosomes.push_back(this_perm);
+
+        if (all_chromosomes.size() > 10){
+            break;
         }
-
-        // 這裡執行你的分析，不儲存到 `all_chromosomes`
-        process_permutation(this_perm); // 這是你用來分析 `this_perm` 的函數
-
-        
 
     } while (next_permutation(
                  base_chromosomes.begin(),
@@ -849,66 +1481,74 @@ int main(int argc, char* argv[]) {
 
     // cout << "all_chromosomes.size() = " << all_chromosomes.size() << endl;
 
-    // int no_weak_id = 0;
-    // for(int emu_i = 0; emu_i < all_chromosomes.size(); emu_i++){
 
-    //     auto chromosomes = all_chromosomes[emu_i];
+    for (auto &p : all_chromosomes) {
+       for (int i = 0; i < p.size(); i++) {
+            p[i].second = p.size() - i;
+       }
+    }    
 
-    //     // cout << "============== weak epi ================="<< endl;
 
-    //     bool all_no_weak = true;
-    //     for (int target_index = 0; target_index < L; target_index++) {
-    //         std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
+    int no_weak_id = 0;
+    for(int emu_i = 0; emu_i < all_chromosomes.size(); emu_i++){
 
-    //         // bool is_weak = false;
-    //         for (int i = 2; i < L; i++) {
-    //             if(weak_epi_count_results[i] > 0){
-    //                 // cout << "S -> " << target_index << endl;
-    //                 // cout << "exist weak with " << "|S| = "<< i << " "<<endl;
-    //                 all_no_weak = false;
-    //                 // is_weak = true;
-    //             }  
-    //         }
-    //     }
+        auto chromosomes = all_chromosomes[emu_i];
 
-    //     if (all_no_weak)
-    //     {
-    //         cout << "----- no weak ["<< no_weak_id << "] ----- " << endl;
-    //         no_weak_id++;
-    //         // cout << "============== all epi ================="<< endl;
-    //         for (int target_index = 0; target_index < L; target_index++) {
-    //             // cout << "S -> " << target_index << endl;
+        // cout << "============== weak epi ================="<< endl;
+
+        bool all_no_weak = true;
+        for (int target_index = 0; target_index < L; target_index++) {
+            std::vector<int> weak_epi_count_results = count_weak(L, target_index, chromosomes, method);
+
+            // bool is_weak = false;
+            for (int i = 2; i < L; i++) {
+                if(weak_epi_count_results[i] > 0){
+                    // cout << "S -> " << target_index << endl;
+                    // cout << "exist weak with " << "|S| = "<< i << " "<<endl;
+                    all_no_weak = false;
+                    // is_weak = true;
+                }  
+            }
+        }
+
+        if (all_no_weak)
+        {
+            cout << "----- no weak ["<< no_weak_id << "] ----- " << endl;
+            no_weak_id++;
+            // cout << "============== all epi ================="<< endl;
+            for (int target_index = 0; target_index < L; target_index++) {
+                // cout << "S -> " << target_index << endl;
                 
-    //             std::vector<int> epi_count_results = count_epi(L, target_index, chromosomes, method);
+                std::vector<int> epi_count_results = count_epi(L, target_index, chromosomes, method);
 
-    //             // for (int i = 1; i < L; i++)
-    //             // {
-    //             //     cout << epi_count_results[i] << " ";
-    //             // }
+                // for (int i = 1; i < L; i++)
+                // {
+                //     cout << epi_count_results[i] << " ";
+                // }
                 
-    //             // for (int count : epi_count_results) {
-    //             //     cout << count << " ";
-    //             // }
-    //             cout << endl;
-    //         }
-    //         // cout << endl;
-    //         // cout << endl;
+                // for (int count : epi_count_results) {
+                //     cout << count << " ";
+                // }
+                cout << endl;
+            }
+            // cout << endl;
+            // cout << endl;
 
-    //         // 排序根據 chom.second 的值由高到低
-    //         sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
-    //             return a.second > b.second; // 由高到低排序
-    //         });
+            // 排序根據 chom.second 的值由高到低
+            sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
+                return a.second > b.second; // 由高到低排序
+            });
 
-    //         cout << "chromosomes & fitness" << endl;
-    //         for (const auto& chom : chromosomes) {
-    //             cout << chom.first << " " << chom.second << endl;
-    //         }
-    //         cout << endl;
+            cout << "chromosomes & fitness" << endl;
+            for (const auto& chom : chromosomes) {
+                cout << chom.first << " " << chom.second << endl;
+            }
+            cout << endl;
 
-    //         }
-    // }
+            }
+    }
 
     cout << "Total permutations = " << permutation_count << endl;
-    // cout << "# no_weak_id = " << no_weak_id << endl;
+    cout << "# no_weak_id = " << no_weak_id << endl;
     return 0;
 }
