@@ -504,56 +504,53 @@ void process_permutation(
         #pragma omp critical
         {
             bool epi_stop = false;
+            // bool epi_stop = true;
             vector<int> epi_count_results(L, 0);
             
             for (int target_index = 0; target_index < L; target_index++) {
-                if (epi_stop) break;
+                // if (epi_stop) break;
                 auto epi_results = count_epi(L, target_index, chromosomes, method, false);
-                for (int i = 2; i < L; i++) {
-                    if (epi_results[i] > 0) {
-                        epi_stop = true;
-                        break;
-                    }
-                }
-                for (int i = 0; i < L; i++) {
-                    epi_count_results[i] += epi_results[i];
-                }
+                // for (int i = 2; i < L; i++) {
+                //     if (epi_results[i] > 0) {
+                //         epi_stop = true;
+                //         break;
+                //     }
+                // }
+                // for (int i = 0; i < L; i++) {
+                //     epi_count_results[i] += epi_results[i];
+                // }
             }
 
             if(!epi_stop) {
                 int epi_size_2_L = 0;
-                for (int index = 2; index < L; index++) {
-                    epi_size_2_L += epi_count_results[index];
-                }
+                // for (int index = 2; index < L; index++) {
+                //     epi_size_2_L += epi_count_results[index];
+                // }
 
                 if (epi_size_2_L == 0) {
-                    if(epi_count_results[1] != 0){
-                    //  if(1){
+                    static int no_weak_id = 0; // 用來記錄「找到第幾個 no_weak 組合」
+                    cout << "----- no weak [" << no_weak_id << "] ----- " << endl;
+                    no_weak_id++;
 
-                        static int no_weak_id = 0; // 用來記錄「找到第幾個 no_weak 組合」
-                        cout << "----- no weak [" << no_weak_id << "] ----- " << endl;
-                        no_weak_id++;
-
-                        // 印出所有 EPI 結果
-                        for (int target_index = 0; target_index < L; target_index++) {
-                            count_epi(L, target_index, chromosomes, method, true);
-                        }
-
-                        // 根據 fitness 排序並印出
-                        sort(chromosomes.begin(), chromosomes.end(),
-                            [](auto &a, auto &b) {
-                                return a.second > b.second;
-                            });
-
-                        cout << "chromosomes & fitness\n";
-                        for (auto &chom : chromosomes) {
-                            cout << chom.first << " " << chom.second << endl;
-                        }
-                        cout << endl;
-
-                        // 找到目標後直接結束程式
-                        // exit(0);
+                    // 印出所有 EPI 結果
+                    for (int target_index = 0; target_index < L; target_index++) {
+                        count_epi(L, target_index, chromosomes, method, true);
                     }
+
+                    // 根據 fitness 排序並印出
+                    sort(chromosomes.begin(), chromosomes.end(),
+                        [](auto &a, auto &b) {
+                            return a.second > b.second;
+                        });
+
+                    cout << "chromosomes & fitness\n";
+                    for (auto &chom : chromosomes) {
+                        cout << chom.first << " " << chom.second << endl;
+                    }
+                    cout << endl;
+
+                    // 找到目標後直接結束程式
+                    // exit(0);
                 }
             }
         }
@@ -638,6 +635,11 @@ int main(int argc, char* argv[]) {
                 for (auto &c : local_chromosomes) {
                     this_perm.push_back(c);
                 }
+                // 給定一個唯一排序的 fitness 值，避免重複
+                // for (int i = 0; i < (int)this_perm.size(); i++) {
+                //     this_perm[i].second = (double)this_perm.size() - i;
+                // }
+                
                 // 給定一個唯一排序的 fitness 值，避免重複
                 for (int i = 0; i < (int)this_perm.size(); i++) {
                     if (i == 0){
