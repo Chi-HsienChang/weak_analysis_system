@@ -537,62 +537,6 @@ vector<pair<string, double>> generate_chromosomes_emu(int L, const string &metho
     return chromosomes;
 }
 
-
-
-
-// map<string, double> read_fitness_rules(const string &filename) {
-//     map<string, double> fitness_rules;
-//     ifstream file(filename);
-//     string line;
-//     regex pattern(R"(\{\s*(\d+)\s*\}\s*->\s*(-?\d+\.?\d*))");
-
-//     if (!file) {
-//         cerr << "無法開啟檔案：" << filename << endl;
-//         return fitness_rules;
-//     }
-
-//     while (getline(file, line)) {
-//         smatch match;
-//         if (regex_search(line, match, pattern)) {
-//             string chromosome = match[1].str();   // 取得 `{}` 內的數字
-//             chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
-//             double fitness = stod(match[2].str()); // 取得 `->` 右側的數字
-//             fitness_rules[chromosome] = fitness;
-//         }
-//     }
-
-//     file.close();
-//     return fitness_rules;
-// }
-
-
-// 讀取適應值規則的函式
-// map<string, double> read_fitness_rules(const string &filename) {
-//     map<string, double> fitness_rules;
-//     ifstream file(filename);
-//     string line;
-//     // 更新 regex，支援 `{ 1 2 3 } -> 0` 這種格式
-//     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(-?\d+\.?\d*))");
-
-//     if (!file) {
-//         cerr << "無法開啟檔案：" << filename << endl;
-//         return fitness_rules;
-//     }
-
-//     while (getline(file, line)) {
-//         smatch match;
-//         if (regex_search(line, match, pattern)) {
-//             string chromosome = match[1].str();   // `{}` 內的數字（可能包含空格）
-//             chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
-//             double fitness = stod(match[2].str()); // `->` 右側的數字
-//             fitness_rules[chromosome] = fitness;
-//         }
-//     }
-
-//     file.close();
-//     return fitness_rules;
-// }
-
 // #include <iostream>
 // #include <fstream>
 // #include <sstream>
@@ -600,36 +544,67 @@ vector<pair<string, double>> generate_chromosomes_emu(int L, const string &metho
 // #include <map>
 // #include <vector>
 // #include <regex>
+// #include <set>
 // #include <algorithm>
 
 // using namespace std;
 
-// // 讀取適應值規則的函式
-// map<string, double> read_fitness_rules(const string &filename) {
-//     map<string, double> fitness_rules;
+// // 讀取並解析適應值規則的函式
+// map<int, set<int>> read_fitness_rules(const string &filename) {
+//     map<int, set<int>> index_to_chromosomes; // key: index, value: set<int> (避免重複)
 //     ifstream file(filename);
 //     string line;
-//     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(-?\d+\.?\d*))");
+//     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(\d+))"); // 匹配 `{}` 內的數字 + `->` 右邊的 index
 
 //     if (!file) {
 //         cerr << "無法開啟檔案：" << filename << endl;
-//         return fitness_rules;
+//         return index_to_chromosomes;
 //     }
 
 //     while (getline(file, line)) {
 //         smatch match;
 //         if (regex_search(line, match, pattern)) {
-//             string chromosome = match[1].str();   // `{}` 內的數字
-//             chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
-//             double fitness = stod(match[2].str()); // `->` 右側的數字
-//             fitness_rules[chromosome] = fitness;
+//             string chromosome_str = match[1].str();  // `{}` 內的數字
+//             int index = stoi(match[2].str()); // `->` 右側的數字當作 index
+
+//             // 解析 chromosome_str，轉換為數字集合
+//             stringstream ss(chromosome_str);
+//             int num;
+//             while (ss >> num) {
+//                 index_to_chromosomes[index].insert(num); // 存入 set<int> 避免重複
+//             }
 //         }
 //     }
 
 //     file.close();
-//     return fitness_rules;
+//     return index_to_chromosomes;
 // }
 
+// // 輸出字典格式
+// map<int, vector<int>> get_output_dict(map<int, set<int>> &index_map) {
+//     map<int, vector<int>> output_dict;
+
+//     for (const auto &group : index_map) {
+//         vector<int> sorted_chromosomes(group.second.begin(), group.second.end());
+//         sort(sorted_chromosomes.begin(), sorted_chromosomes.end()); // 確保數字順序
+//         output_dict[group.first] = sorted_chromosomes;
+//     }
+
+//     return output_dict;
+// }
+
+// // 顯示 map 內容
+// void print_output_dict(const map<int, vector<int>> &output_dict) {
+//     cout << "輸出字典內容：" << endl;
+//     for (const auto &pair : output_dict) {
+//         cout << pair.first << " <- [";
+//         for (size_t i = 0; i < pair.second.size(); i++) {
+//             if (i > 0) cout << ", ";
+//             cout << pair.second[i];
+//         }
+//         cout << "]" << endl;
+//     }
+// }
 
 #include <iostream>
 #include <fstream>
@@ -644,8 +619,8 @@ vector<pair<string, double>> generate_chromosomes_emu(int L, const string &metho
 using namespace std;
 
 // 讀取並解析適應值規則的函式
-map<int, set<string>> read_fitness_rules(const string &filename) {
-    map<int, set<string>> index_to_chromosomes; // key: index, value: chromosomes
+map<int, set<int>> read_fitness_rules(const string &filename) {
+    map<int, set<int>> index_to_chromosomes; // key: index, value: set<int> (避免重複)
     ifstream file(filename);
     string line;
     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(\d+))"); // 匹配 `{}` 內的數字 + `->` 右邊的 index
@@ -658,12 +633,27 @@ map<int, set<string>> read_fitness_rules(const string &filename) {
     while (getline(file, line)) {
         smatch match;
         if (regex_search(line, match, pattern)) {
-            string chromosome = match[1].str();  // `{}` 內的數字
-            chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
+            string chromosome_str = match[1].str();  // `{}` 內的數字
             int index = stoi(match[2].str()); // `->` 右側的數字當作 index
 
+            // 解析 chromosome_str，轉換為數字集合
+            stringstream ss(chromosome_str);
+            int num;
+            vector<int> chromosome_numbers;
+            while (ss >> num) {
+                chromosome_numbers.push_back(num);
+            }
+            
+            // 將 vector<int> 轉換為數字串（例如 `{1 2}` 變 `12`）
+            sort(chromosome_numbers.begin(), chromosome_numbers.end());
+            stringstream combined;
+            for (int n : chromosome_numbers) {
+                combined << n;
+            }
+            int combined_number = stoi(combined.str());
+
             // 存入 map，以 index 為 key，chromosome 為 value
-            index_to_chromosomes[index].insert(chromosome);
+            index_to_chromosomes[index].insert(combined_number);
         }
     }
 
@@ -671,50 +661,49 @@ map<int, set<string>> read_fitness_rules(const string &filename) {
     return index_to_chromosomes;
 }
 
-// 將 `chromosome` 按數字大小排序（確保 `0,2,12` 而不是 `0,12,2`）
-vector<string> sort_chromosomes(const set<string> &chromosomes) {
-    vector<string> sorted_list(chromosomes.begin(), chromosomes.end());
-    sort(sorted_list.begin(), sorted_list.end(), [](const string &a, const string &b) {
-        return stoi(a) < stoi(b);
-    });
-    return sorted_list;
-}
-
-// 輸出到 txt 檔案
-void write_output(const string &filename, map<int, set<string>> &index_map) {
-    ofstream output_file(filename);
-    if (!output_file) {
-        cerr << "無法開啟輸出檔案：" << filename << endl;
-        return;
-    }
+// 將數據存入 map<int, vector<int>>，並確保數字順序
+map<int, vector<int>> get_output_dict(map<int, set<int>> &index_map) {
+    map<int, vector<int>> output_dict;
 
     for (const auto &group : index_map) {
-        // 排序後的 chromosomes
-        vector<string> sorted_chromosomes = sort_chromosomes(group.second);
-
-        // 先輸出 chromosomes
-        for (size_t i = 0; i < sorted_chromosomes.size(); i++) {
-            if (i > 0) output_file << ",";
-            output_file << sorted_chromosomes[i];
-        }
-        // 加上 `-> index`
-        output_file << "->" << group.first << endl;
+        vector<int> sorted_chromosomes(group.second.begin(), group.second.end());
+        sort(sorted_chromosomes.begin(), sorted_chromosomes.end()); // 確保數字順序
+        output_dict[group.first] = sorted_chromosomes;
     }
 
-    output_file.close();
+    return output_dict;
 }
+
+// 顯示 map 內容
+void print_output_dict(const map<int, vector<int>> &output_dict) {
+    cout << "輸出字典內容：" << endl;
+    for (const auto &pair : output_dict) {
+        cout << pair.first << " <- [";
+        for (size_t i = 0; i < pair.second.size(); i++) {
+            if (i > 0) cout << ", ";
+            cout << pair.second[i];
+        }
+        cout << "]" << endl;
+    }
+}
+
+
+
+
 
 int main(int argc, char* argv[]) {
 
 
-
     string input_filename = "input.txt"; // 輸入檔案
-    string output_filename = "output.txt"; // 輸出檔案
 
-    map<int, set<string>> index_map = read_fitness_rules(input_filename);
+    // 讀取數據
+    map<int, set<int>> index_map = read_fitness_rules(input_filename);
     
-    // 寫入輸出檔案
-    write_output(output_filename, index_map);
+    // 取得輸出字典
+    map<int, vector<int>> output_dict = get_output_dict(index_map);
+
+    // 顯示輸出字典內容
+    print_output_dict(output_dict);
 
     exit(0);
 

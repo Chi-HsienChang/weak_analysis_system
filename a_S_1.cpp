@@ -10,10 +10,6 @@
 #include <sys/statvfs.h>  // 獲取磁碟空間資訊
 #include <cstdlib>  // exit()
 #include <unistd.h> // sleep()
-#include <fstream>
-#include <sstream>
-#include <map>
-#include <regex>
 using namespace std;
 
 #define DEBUG 1
@@ -106,7 +102,7 @@ bool check_constrained_optima_epi(int target_index, auto combination, auto enume
     }
 }
 
-int check_epi(int target_index, auto combination, auto enumerations, auto chromosomes) {
+int check_epi(int target_index, auto combination, auto enumerations, auto chromosomes, bool isPrint) {
 
     int condition_holds = 0;
     for (int condition_index = 0; condition_index < combination.size(); condition_index++)
@@ -135,7 +131,7 @@ int check_epi(int target_index, auto combination, auto enumerations, auto chromo
 
     if (condition_holds == combination.size())
         {
-            if (DEBUG){  
+            if (isPrint){  
                 cout << "{ ";
                 for (const auto& elem : combination) {
                     cout << elem << " ";
@@ -271,7 +267,7 @@ bool check_constrained_optima(int target_index, auto combination, auto enumerati
     }
 }
 
-std::vector<int> count_epi(int L, int target_index, auto chromosomes, const string& method)
+std::vector<int> count_epi(int L, int target_index, auto chromosomes, const string& method, bool isPrint)
 {
     std::vector<std::vector<std::vector<int>>> weak_epi_set(L);
     std::vector<int> weak_epi_count(L, 0); 
@@ -308,7 +304,8 @@ std::vector<int> count_epi(int L, int target_index, auto chromosomes, const stri
             {
                 auto enumerations = generateBinarySequences(epi_size); // enumerations = { [0, 0], [0, 1], [1, 0], [1, 1] }    
 
-                int result = check_epi(target_index, combination, enumerations, chromosomes);
+                int result = check_epi(target_index, combination, enumerations, chromosomes, isPrint);
+                // cout << "result: " << result << endl;
                 weak_epi_count[epi_size] += result;
                 if (result)
                 {
@@ -420,9 +417,34 @@ std::vector<int> count_weak(int L, int target_index, auto chromosomes, const str
 }
 
 
+//----------------- 自行依需求修改的適應值計算函式 -------------------
+double calculate_fitness_emu(const string &chromosome, const string &method) {
+    // 這裡範例只把 '1' 的數量當作 fitness，實際可依照你的需求實作
+    double fitness = 0.0;
+    for (char c : chromosome) {
+        if (c == '1') fitness += 1.0;
+    }
+    return fitness;
+}
 
+//----------------- 產生所有 2^L 染色體並計算 fitness ----------------
+vector<pair<string, double>> generate_chromosomes_emu(int L, const string &method) {
+    vector<pair<string, double>> chromosomes;
+    // 2^L 個組合
+    int num_combinations = static_cast<int>(pow(2, L));
 
+    for (int i = 0; i < num_combinations; ++i) {
+        // 用 bitset 產生二進位字串，再擷取後 L 位
+        string chromosome = bitset<32>(i).to_string().substr(32 - L);
 
+        // 計算此染色體的適應值
+        double fitness = calculate_fitness_emu(chromosome, method);
+
+        // 儲存 (染色體字串, fitness) 組
+        chromosomes.push_back({chromosome, fitness});
+    }
+    return chromosomes;
+}
 
 // Sample n chromosomes randomly from all_chromosomes
 vector<pair<string, double>> sample_chromosomes(const vector<pair<string, double>>& all_chromosomes, int n) {
@@ -442,6 +464,8 @@ vector<pair<string, double>> sample_chromosomes(const vector<pair<string, double
     return sampled_chromosomes;
 }
 
+
+
 // 顯示進度條
 void show_progress_bar(double progress) {
     #pragma omp critical  // 確保多執行緒時不會交錯輸出
@@ -450,6 +474,9 @@ void show_progress_bar(double progress) {
         std::cerr.flush();
     }
 }
+
+
+
 
 // 處理單個排列
 void process_permutation(vector<pair<string, double>> chromosomes, long long &permutation_count, long long total_permutations) {
@@ -475,23 +502,59 @@ void process_permutation(vector<pair<string, double>> chromosomes, long long &pe
     if (all_no_weak) {
         #pragma omp critical  // 避免多執行緒輸出混亂
         {
-            cout << "----- no weak [" << no_weak_id << "] ----- " << endl;
-            no_weak_id++;
 
+            bool epi_stop = false;
+            std::vector<int> epi_count_results(L, 0);
+            
             for (int target_index = 0; target_index < L; target_index++) {
-                std::vector<int> epi_count_results = count_epi(L, target_index, chromosomes, method);
+                if(epi_stop){
+                    break;
+                }
+                auto epi_results = count_epi(L, target_index, chromosomes, method, false);
+                for (int i = 2; i < L; i++) {
+                    if (epi_results[i] > 0){
+                        epi_stop = true;
+                        break;
+                    }
+                }
+                for (int i = 0; i < L; i++) {
+                    epi_count_results[i] += epi_results[i];
+                }
             }
 
-            // 根據 fitness 排序
-            sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
-                return a.second > b.second;
-            });
 
-            cout << "chromosomes & fitness" << endl;
-            for (const auto& chom : chromosomes) {
-                cout << chom.first << " " << chom.second << endl;
+
+            if(!epi_stop)
+            {
+
+                int epi_size_2_L = 0;
+                for (int index = 2; index < L; index++) {
+                    epi_size_2_L += epi_count_results[index];
+                }
+
+                if (epi_size_2_L == 0) {
+
+                    cout << "----- no weak [" << no_weak_id << "] ----- " << endl;
+                    no_weak_id++;
+                    // cout<<"epi_size_2_L: "<<epi_size_2_L<<endl; 
+                    for (int target_index = 0; target_index < L; target_index++) {
+                        count_epi(L, target_index, chromosomes, method, true);
+                    }
+                    
+                    // 根據 fitness 排序
+                    sort(chromosomes.begin(), chromosomes.end(), [](const auto& a, const auto& b) {
+                        return a.second > b.second;
+                    });
+
+                    cout << "chromosomes & fitness" << endl;
+                    for (const auto& chom : chromosomes) {
+                        cout << chom.first << " " << chom.second << endl;
+                    }
+                    cout << endl;
+
+                    exit(0);
+                }
             }
-            cout << endl;
         }
     }
 
@@ -503,222 +566,7 @@ void process_permutation(vector<pair<string, double>> chromosomes, long long &pe
     show_progress_bar(double(permutation_count) / total_permutations);
 }
 
-//----------------- 自行依需求修改的適應值計算函式 -------------------
-double calculate_fitness_emu(const string &chromosome, const string &method) {
-    // 計算 '1' 的數量
-    double fitness = 0.0;
-    int count = 0;
-    
-    for (char c : chromosome) {
-        if (c == '1') count++;
-    }
-
-    // 如果全部都是 '1'，回傳 chromosome.size()，否則回傳 0
-    return (count == chromosome.size()) ? static_cast<double>(pow(2, chromosome.size())) : 0.0;
-}
-
-
-//----------------- 產生所有 2^L 染色體並計算 fitness ----------------
-vector<pair<string, double>> generate_chromosomes_emu(int L, const string &method) {
-    vector<pair<string, double>> chromosomes;
-    // 2^L 個組合
-    int num_combinations = static_cast<int>(pow(2, L));
-
-    for (int i = 0; i < num_combinations; ++i) {
-        // 用 bitset 產生二進位字串，再擷取後 L 位
-        string chromosome = bitset<32>(i).to_string().substr(32 - L);
-
-        // 計算此染色體的適應值
-        double fitness = calculate_fitness_emu(chromosome, method);
-
-        // 儲存 (染色體字串, fitness) 組
-        chromosomes.push_back({chromosome, fitness});
-    }
-    return chromosomes;
-}
-
-
-
-
-// map<string, double> read_fitness_rules(const string &filename) {
-//     map<string, double> fitness_rules;
-//     ifstream file(filename);
-//     string line;
-//     regex pattern(R"(\{\s*(\d+)\s*\}\s*->\s*(-?\d+\.?\d*))");
-
-//     if (!file) {
-//         cerr << "無法開啟檔案：" << filename << endl;
-//         return fitness_rules;
-//     }
-
-//     while (getline(file, line)) {
-//         smatch match;
-//         if (regex_search(line, match, pattern)) {
-//             string chromosome = match[1].str();   // 取得 `{}` 內的數字
-//             chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
-//             double fitness = stod(match[2].str()); // 取得 `->` 右側的數字
-//             fitness_rules[chromosome] = fitness;
-//         }
-//     }
-
-//     file.close();
-//     return fitness_rules;
-// }
-
-
-// 讀取適應值規則的函式
-// map<string, double> read_fitness_rules(const string &filename) {
-//     map<string, double> fitness_rules;
-//     ifstream file(filename);
-//     string line;
-//     // 更新 regex，支援 `{ 1 2 3 } -> 0` 這種格式
-//     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(-?\d+\.?\d*))");
-
-//     if (!file) {
-//         cerr << "無法開啟檔案：" << filename << endl;
-//         return fitness_rules;
-//     }
-
-//     while (getline(file, line)) {
-//         smatch match;
-//         if (regex_search(line, match, pattern)) {
-//             string chromosome = match[1].str();   // `{}` 內的數字（可能包含空格）
-//             chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
-//             double fitness = stod(match[2].str()); // `->` 右側的數字
-//             fitness_rules[chromosome] = fitness;
-//         }
-//     }
-
-//     file.close();
-//     return fitness_rules;
-// }
-
-// #include <iostream>
-// #include <fstream>
-// #include <sstream>
-// #include <string>
-// #include <map>
-// #include <vector>
-// #include <regex>
-// #include <algorithm>
-
-// using namespace std;
-
-// // 讀取適應值規則的函式
-// map<string, double> read_fitness_rules(const string &filename) {
-//     map<string, double> fitness_rules;
-//     ifstream file(filename);
-//     string line;
-//     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(-?\d+\.?\d*))");
-
-//     if (!file) {
-//         cerr << "無法開啟檔案：" << filename << endl;
-//         return fitness_rules;
-//     }
-
-//     while (getline(file, line)) {
-//         smatch match;
-//         if (regex_search(line, match, pattern)) {
-//             string chromosome = match[1].str();   // `{}` 內的數字
-//             chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
-//             double fitness = stod(match[2].str()); // `->` 右側的數字
-//             fitness_rules[chromosome] = fitness;
-//         }
-//     }
-
-//     file.close();
-//     return fitness_rules;
-// }
-
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <map>
-#include <vector>
-#include <regex>
-#include <set>
-#include <algorithm>
-
-using namespace std;
-
-// 讀取並解析適應值規則的函式
-map<int, set<string>> read_fitness_rules(const string &filename) {
-    map<int, set<string>> index_to_chromosomes; // key: index, value: chromosomes
-    ifstream file(filename);
-    string line;
-    regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(\d+))"); // 匹配 `{}` 內的數字 + `->` 右邊的 index
-
-    if (!file) {
-        cerr << "無法開啟檔案：" << filename << endl;
-        return index_to_chromosomes;
-    }
-
-    while (getline(file, line)) {
-        smatch match;
-        if (regex_search(line, match, pattern)) {
-            string chromosome = match[1].str();  // `{}` 內的數字
-            chromosome.erase(remove(chromosome.begin(), chromosome.end(), ' '), chromosome.end()); // 移除空格
-            int index = stoi(match[2].str()); // `->` 右側的數字當作 index
-
-            // 存入 map，以 index 為 key，chromosome 為 value
-            index_to_chromosomes[index].insert(chromosome);
-        }
-    }
-
-    file.close();
-    return index_to_chromosomes;
-}
-
-// 將 `chromosome` 按數字大小排序（確保 `0,2,12` 而不是 `0,12,2`）
-vector<string> sort_chromosomes(const set<string> &chromosomes) {
-    vector<string> sorted_list(chromosomes.begin(), chromosomes.end());
-    sort(sorted_list.begin(), sorted_list.end(), [](const string &a, const string &b) {
-        return stoi(a) < stoi(b);
-    });
-    return sorted_list;
-}
-
-// 輸出到 txt 檔案
-void write_output(const string &filename, map<int, set<string>> &index_map) {
-    ofstream output_file(filename);
-    if (!output_file) {
-        cerr << "無法開啟輸出檔案：" << filename << endl;
-        return;
-    }
-
-    for (const auto &group : index_map) {
-        // 排序後的 chromosomes
-        vector<string> sorted_chromosomes = sort_chromosomes(group.second);
-
-        // 先輸出 chromosomes
-        for (size_t i = 0; i < sorted_chromosomes.size(); i++) {
-            if (i > 0) output_file << ",";
-            output_file << sorted_chromosomes[i];
-        }
-        // 加上 `-> index`
-        output_file << "->" << group.first << endl;
-    }
-
-    output_file.close();
-}
-
 int main(int argc, char* argv[]) {
-
-
-
-    string input_filename = "input.txt"; // 輸入檔案
-    string output_filename = "output.txt"; // 輸出檔案
-
-    map<int, set<string>> index_map = read_fitness_rules(input_filename);
-    
-    // 寫入輸出檔案
-    write_output(output_filename, index_map);
-
-    exit(0);
-
-
     if (argc != 4) {
         cerr << "Usage: " << argv[0] << " <Problem Length L> <Fitness Method> <Num Threads>" << endl;
         return 1;
@@ -735,14 +583,6 @@ int main(int argc, char* argv[]) {
 
     // 取得全部 2^L 染色體
     vector<pair<string, double>> base_chromosomes = generate_chromosomes_emu(L, method);
-
-    // cout << "chromosomes & fitness" << endl;
-    // for (const auto& chom : base_chromosomes) {
-    //     cout << chom.first << " " << chom.second << endl;
-    // }
-    // cout << endl;
-
-   
 
     // 找出 "最佳解" (fitness 最大)
     auto it_best = max_element(
@@ -765,14 +605,13 @@ int main(int argc, char* argv[]) {
         total_permutations *= i;
     }
 
-
-
     // 直接在 next_permutation 內部並行處理
     #pragma omp parallel
     {
         vector<pair<string, double>> local_chromosomes = base_chromosomes;
 
         do {
+            cout << "permutation_count [" << permutation_count << "]" << endl;
 
             // **在每次排列計算前，檢查磁碟空間**
             if (!check_disk_space("/", min_free_gb)) {
@@ -786,7 +625,6 @@ int main(int argc, char* argv[]) {
             for (auto &c : local_chromosomes) {
                 this_perm.push_back(c);
             }
-
             for (int i = 0; i < this_perm.size(); i++) {
                 this_perm[i].second = this_perm.size() - i;
             }
