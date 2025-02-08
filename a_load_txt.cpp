@@ -271,6 +271,50 @@ bool check_constrained_optima(int target_index, auto combination, auto enumerati
     }
 }
 
+map<int, set<vector<int>>> count_epi_map(int L, int target_index, auto chromosomes, const string& method) {
+    map<int, set<vector<int>>> weak_epi_map; // 存放 { index -> set of vectors }
+    vector<vector<vector<int>>> weak_epi_set(L); // 存放找到的組合
+    vector<int> weak_epi_count(L, 0); 
+
+    for (int epi_size = 1; epi_size < L; epi_size++) {  
+        auto combinations = generateCombinations(L-1, epi_size, target_index); // combinations = { [1, 2], [1, 3], [2, 3] }
+
+        for (auto& combination : combinations) { // combination = [1, 2]
+            bool not_find_smaller_epi = true;
+
+            if (epi_size > 1) {
+                int smaller_epi_size = epi_size;
+                bool is_subset;
+                while (not_find_smaller_epi && smaller_epi_size >= 1) {   
+                    for (auto& previous : weak_epi_set[smaller_epi_size-1]) {
+                        is_subset = isSubset(previous, combination);
+                        not_find_smaller_epi = !is_subset;
+                        if (is_subset) break;
+                    }
+                    smaller_epi_size--;
+                }
+            }
+
+            if (not_find_smaller_epi) {
+                auto enumerations = generateBinarySequences(epi_size); // enumerations = { [0, 0], [0, 1], [1, 0], [1, 1] }    
+
+                int result = check_epi(target_index, combination, enumerations, chromosomes);
+                weak_epi_count[epi_size] += result;
+
+                if (result) {
+                    weak_epi_set[epi_size].push_back(combination);
+
+                    // 存入 map，將 `combination` 加入 index `target_index`
+                    weak_epi_map[target_index].insert(combination);
+                }
+            }
+        }
+    }
+
+    return weak_epi_map;
+}
+
+
 std::vector<int> count_epi(int L, int target_index, auto chromosomes, const string& method)
 {
     std::vector<std::vector<std::vector<int>>> weak_epi_set(L);
@@ -514,7 +558,8 @@ double calculate_fitness_emu(const string &chromosome, const string &method) {
     }
 
     // 如果全部都是 '1'，回傳 chromosome.size()，否則回傳 0
-    return (count == chromosome.size()) ? static_cast<double>(pow(2, chromosome.size())) : 0.0;
+    // return (count == chromosome.size()) ? static_cast<double>(pow(2, chromosome.size())) : 0.0;
+    return count;
 }
 
 
@@ -537,90 +582,9 @@ vector<pair<string, double>> generate_chromosomes_emu(int L, const string &metho
     return chromosomes;
 }
 
-// #include <iostream>
-// #include <fstream>
-// #include <sstream>
-// #include <string>
-// #include <map>
-// #include <vector>
-// #include <regex>
-// #include <set>
-// #include <algorithm>
-
-// using namespace std;
-
-// // 讀取並解析適應值規則的函式
-// map<int, set<int>> read_fitness_rules(const string &filename) {
-//     map<int, set<int>> index_to_chromosomes; // key: index, value: set<int> (避免重複)
-//     ifstream file(filename);
-//     string line;
-//     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(\d+))"); // 匹配 `{}` 內的數字 + `->` 右邊的 index
-
-//     if (!file) {
-//         cerr << "無法開啟檔案：" << filename << endl;
-//         return index_to_chromosomes;
-//     }
-
-//     while (getline(file, line)) {
-//         smatch match;
-//         if (regex_search(line, match, pattern)) {
-//             string chromosome_str = match[1].str();  // `{}` 內的數字
-//             int index = stoi(match[2].str()); // `->` 右側的數字當作 index
-
-//             // 解析 chromosome_str，轉換為數字集合
-//             stringstream ss(chromosome_str);
-//             int num;
-//             while (ss >> num) {
-//                 index_to_chromosomes[index].insert(num); // 存入 set<int> 避免重複
-//             }
-//         }
-//     }
-
-//     file.close();
-//     return index_to_chromosomes;
-// }
-
-// // 輸出字典格式
-// map<int, vector<int>> get_output_dict(map<int, set<int>> &index_map) {
-//     map<int, vector<int>> output_dict;
-
-//     for (const auto &group : index_map) {
-//         vector<int> sorted_chromosomes(group.second.begin(), group.second.end());
-//         sort(sorted_chromosomes.begin(), sorted_chromosomes.end()); // 確保數字順序
-//         output_dict[group.first] = sorted_chromosomes;
-//     }
-
-//     return output_dict;
-// }
-
-// // 顯示 map 內容
-// void print_output_dict(const map<int, vector<int>> &output_dict) {
-//     cout << "輸出字典內容：" << endl;
-//     for (const auto &pair : output_dict) {
-//         cout << pair.first << " <- [";
-//         for (size_t i = 0; i < pair.second.size(); i++) {
-//             if (i > 0) cout << ", ";
-//             cout << pair.second[i];
-//         }
-//         cout << "]" << endl;
-//     }
-// }
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <map>
-#include <vector>
-#include <regex>
-#include <set>
-#include <algorithm>
-
-using namespace std;
-
 // 讀取並解析適應值規則的函式
-map<int, set<int>> read_fitness_rules(const string &filename) {
-    map<int, set<int>> index_to_chromosomes; // key: index, value: set<int> (避免重複)
+map<int, set<vector<int>>> read_fitness_rules(const string &filename) {
+    map<int, set<vector<int>>> index_to_chromosomes; // key: index, value: set<vector<int>> (避免重複)
     ifstream file(filename);
     string line;
     regex pattern(R"(\{\s*([\d\s]+)\s*\}\s*->\s*(\d+))"); // 匹配 `{}` 內的數字 + `->` 右邊的 index
@@ -636,24 +600,19 @@ map<int, set<int>> read_fitness_rules(const string &filename) {
             string chromosome_str = match[1].str();  // `{}` 內的數字
             int index = stoi(match[2].str()); // `->` 右側的數字當作 index
 
-            // 解析 chromosome_str，轉換為數字集合
+            // 解析 chromosome_str，轉換為 vector<int>
             stringstream ss(chromosome_str);
+            vector<int> chromosome;
             int num;
-            vector<int> chromosome_numbers;
             while (ss >> num) {
-                chromosome_numbers.push_back(num);
+                chromosome.push_back(num);
             }
-            
-            // 將 vector<int> 轉換為數字串（例如 `{1 2}` 變 `12`）
-            sort(chromosome_numbers.begin(), chromosome_numbers.end());
-            stringstream combined;
-            for (int n : chromosome_numbers) {
-                combined << n;
-            }
-            int combined_number = stoi(combined.str());
 
-            // 存入 map，以 index 為 key，chromosome 為 value
-            index_to_chromosomes[index].insert(combined_number);
+            // 確保數字順序統一
+            sort(chromosome.begin(), chromosome.end());
+
+            // 存入 map，以 index 為 key，chromosome 為 value (避免重複)
+            index_to_chromosomes[index].insert(chromosome);
         }
     }
 
@@ -661,21 +620,48 @@ map<int, set<int>> read_fitness_rules(const string &filename) {
     return index_to_chromosomes;
 }
 
-// 將數據存入 map<int, vector<int>>，並確保數字順序
-map<int, vector<int>> get_output_dict(map<int, set<int>> &index_map) {
-    map<int, vector<int>> output_dict;
 
-    for (const auto &group : index_map) {
-        vector<int> sorted_chromosomes(group.second.begin(), group.second.end());
-        sort(sorted_chromosomes.begin(), sorted_chromosomes.end()); // 確保數字順序
-        output_dict[group.first] = sorted_chromosomes;
+// itos 函式：將 vector<int> 轉換為指定格式的字串
+string itos(const vector<int> &nums) {
+    if (nums.empty()) return "";
+
+    if (nums.size() == 1) {
+        return to_string(nums[0]); // 單個數字轉換為 `[x]`
     }
 
-    return output_dict;
+    stringstream formatted;
+    formatted << "";
+    for (size_t i = 0; i < nums.size(); i++) {
+        if (i > 0) formatted << "";
+        formatted << nums[i];
+    }
+    formatted << "";
+    return formatted.str();
 }
 
-// 顯示 map 內容
-void print_output_dict(const map<int, vector<int>> &output_dict) {
+// 將數據存入 map<int, vector<string>>，並確保數字順序
+map<int, vector<string>> get_output_dict(map<int, set<vector<int>>> &index_map) {
+    map<int, vector<string>> output_dict_string;
+
+    for (const auto &group : index_map) {
+        vector<string> formatted_chromosomes;
+
+        for (const auto &chromosome : group.second) {
+            formatted_chromosomes.push_back(itos(chromosome));
+        }
+
+        // 確保字串排序
+        sort(formatted_chromosomes.begin(), formatted_chromosomes.end());
+
+        // 存入 map
+        output_dict_string[group.first] = formatted_chromosomes;
+    }
+
+    return output_dict_string;
+}
+
+// 顯示輸出字典內容
+void print_output_dict(const map<int, vector<string>> &output_dict) {
     cout << "輸出字典內容：" << endl;
     for (const auto &pair : output_dict) {
         cout << pair.first << " <- [";
@@ -688,6 +674,189 @@ void print_output_dict(const map<int, vector<int>> &output_dict) {
 }
 
 
+// #include <iostream>
+// #include <vector>
+// #include <map>
+// #include <set>
+// #include <algorithm>
+// #include <sstream>
+
+// using namespace std;
+
+// // 假設 base_chromosomes 格式為 vector<pair<string, double>>，存放 染色體 和 fitness
+// void adjust_chromosome_ranking(vector<pair<string, double>> &base_chromosomes, map<int, set<vector<int>>> &output_dict) {
+//     // 取得 epi_count_map
+//     map<int, set<vector<int>>> epi_count_map = count_epi_map(base_chromosomes.size(), 0, base_chromosomes, "method");
+
+//     for (const auto& S : output_dict[0]) {
+//         for (const auto& s : S) {
+//             // 確保 s 存在於 epi_count_map[0]
+//             bool s_in_epi_map = false;
+//             for (const auto& S2 : epi_count_map[0]) {
+//                 if (find(S2.begin(), S2.end(), s) != S2.end()) {
+//                     s_in_epi_map = true;
+//                     break;
+//                 }
+//             }
+            
+//             if (!s_in_epi_map) continue; // 如果 s 不在 epi_count_map[0]，跳過
+
+//             // 遍歷 base_chromosomes，確保 chromosome[s] == 0 且 chromosome[0] == 0
+//             vector<pair<string, double>> eligible_chromosomes;
+//             for (auto &chom : base_chromosomes) {
+//                 if (chom.first[s] == '0' && chom.first[0] == '0') {
+//                     eligible_chromosomes.push_back(chom);
+//                 }
+//             }
+
+//             // 排序 eligible_chromosomes 使其能夠上升排名，但最高不超過第二名
+//             sort(eligible_chromosomes.begin(), eligible_chromosomes.end(), [](auto &a, auto &b) {
+//                 return a.second > b.second; // fitness 降序排序
+//             });
+
+//             // 確保最高排名最多到第二名
+//             if (eligible_chromosomes.size() > 1) {
+//                 eligible_chromosomes[0].second = eligible_chromosomes[1].second + 0.01; // 讓排名最高的變成第二名
+//             }
+//         }
+//     }
+
+//     // 重新排序 base_chromosomes
+//     sort(base_chromosomes.begin(), base_chromosomes.end(), [](auto &a, auto &b) {
+//         return a.second > b.second; // 按 fitness 由大到小排序
+//     });
+// }
+
+// void adjust_chromosome_ranking(vector<pair<string, double>> &base_chromosomes, map<int, set<vector<int>>> &output_dict) {
+//     // 取得 epi_count_map
+//     map<int, set<vector<int>>> epi_count_map = count_epi_map(base_chromosomes.size(), 0, base_chromosomes, "method");
+
+//     for (const auto& S : output_dict[0]) {
+//         for (const auto& s : S) {
+//             // 轉換 `s` 為 `vector<int>`，確保能與 `epi_count_map[0]` 比對
+//             vector<int> s_vec = {s};
+
+//             // 確保 s 存在於 `epi_count_map[0]`
+//             bool s_in_epi_map = false;
+//             for (const auto& S2 : epi_count_map[0]) {
+//                 if (S2 == s_vec) {  // 直接比較 `vector<int>`
+//                     s_in_epi_map = true;
+//                     break;
+//                 }
+//             }
+
+//             if (!s_in_epi_map) continue; // 如果 `s` 不在 `epi_count_map[0]`，跳過
+
+//             // 遍歷 base_chromosomes，確保 `chromosome[s] == 0 且 chromosome[0] == 0`
+//             vector<pair<string, double>*> eligible_chromosomes;
+//             for (auto &chom : base_chromosomes) {
+//                 if (chom.first[s] == '0' && chom.first[0] == '0') {
+//                     eligible_chromosomes.push_back(&chom);
+//                 }
+//             }
+
+//             // 排序 eligible_chromosomes 使其能夠上升排名，但最高不超過第二名
+//             sort(eligible_chromosomes.begin(), eligible_chromosomes.end(), [](auto &a, auto &b) {
+//                 return a->second > b->second; // 按 fitness 降序排序
+//             });
+
+//             // 確保最高排名最多到第二名
+//             if (eligible_chromosomes.size() > 1) {
+//                 eligible_chromosomes[0]->second = eligible_chromosomes[1]->second + 0.01; // 讓最高的變成第二名
+//             }
+//         }
+//     }
+
+//     // 重新排序 base_chromosomes
+//     sort(base_chromosomes.begin(), base_chromosomes.end(), [](auto &a, auto &b) {
+//         return a.second > b.second; // 按 fitness 由大到小排序
+//     });
+// }
+
+
+void adjust_chromosome_ranking(vector<pair<string, double>> &base_chromosomes, map<int, set<vector<int>>> &output_dict, map<int, set<vector<int>>> &epi_count_map) {
+    for (const auto& S : output_dict[0]) {
+        for (const auto& s : S) {
+            // 轉換 `s` 為 `vector<int>`，確保能與 `epi_count_map[0]` 比對
+            vector<int> s_vec = {s};
+
+            // 確保 s 存在於 `epi_count_map[0]`
+            if (epi_count_map[0].find(s_vec) == epi_count_map[0].end()) continue; // 若 s 不在 `epi_count_map[0]`，跳過
+
+            // 遍歷 base_chromosomes，確保 `chromosome[s] == 0 且 chromosome[0] == 0`
+            vector<pair<string, double>*> eligible_chromosomes;
+            for (auto &chom : base_chromosomes) {
+                if (chom.first[s] == '0' && chom.first[0] == '0') {
+                    eligible_chromosomes.push_back(&chom);
+                }
+            }
+
+            // 排序 eligible_chromosomes 使其能夠上升排名，但最高不超過第二名
+            sort(eligible_chromosomes.begin(), eligible_chromosomes.end(), [](auto &a, auto &b) {
+                return a->second > b->second; // 按 fitness 降序排序
+            });
+
+            // 確保最高排名最多到第二名
+            if (eligible_chromosomes.size() > 1) {
+                eligible_chromosomes[0]->second = eligible_chromosomes[1]->second + 0.01; // 讓最高的變成第二名
+            }
+        }
+    }
+
+    // 重新排序 base_chromosomes
+    sort(base_chromosomes.begin(), base_chromosomes.end(), [](auto &a, auto &b) {
+        return a.second > b.second; // 按 fitness 由大到小排序
+    });
+}
+
+
+// int main(int argc, char* argv[]) {
+//     if (argc != 4) {
+//         cerr << "Usage: " << argv[0] << " <Problem Length L> <Fitness Method> <Num Threads>" << endl;
+//         return 1;
+//     }
+
+//     int L = stoi(argv[1]);
+//     string method = argv[2];
+//     int num_threads = stoi(argv[3]);  // 使用者輸入要用的執行緒數量
+//     int n = pow(2, L);
+
+//     omp_set_num_threads(num_threads);  // 設定 OpenMP 使用的核心數量
+
+//     // 讀取輸入檔案，獲取 `output_dict`
+//     string input_filename = "input.txt"; 
+//     map<int, set<vector<int>>> index_map = read_fitness_rules(input_filename);
+//     map<int, set<vector<int>>> output_dict = index_map; // 假設 `output_dict` 直接來自 `index_map`
+    
+//     // 取得全部 2^L 染色體
+//     vector<pair<string, double>> base_chromosomes = generate_chromosomes_emu(L, method);
+  
+//     sort(base_chromosomes.begin(), base_chromosomes.end(),
+//          [](auto &a, auto &b) {
+//              if (a.second != b.second) return a.second > b.second; 
+//              return a.first > b.first;
+//          });
+
+//     cout << "chromosomes & fitness" << endl;
+//     for (const auto& chom : base_chromosomes) {
+//         cout << chom.first << " " << chom.second << endl;
+//     }
+//     cout << endl;
+
+//     // 取得 `epi_count_map`，只計算一次
+//     map<int, set<vector<int>>> epi_count_map = count_epi_map(L, 0, base_chromosomes, method);
+
+//     // 調整 `base_chromosomes` 排名
+//     adjust_chromosome_ranking(base_chromosomes, output_dict, epi_count_map);
+
+//     cout << "調整後的 chromosomes & fitness" << endl;
+//     for (const auto& chom : base_chromosomes) {
+//         cout << chom.first << " " << chom.second << endl;
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
 
 
 
@@ -697,15 +866,16 @@ int main(int argc, char* argv[]) {
     string input_filename = "input.txt"; // 輸入檔案
 
     // 讀取數據
-    map<int, set<int>> index_map = read_fitness_rules(input_filename);
+    map<int, set<vector<int>>> index_map = read_fitness_rules(input_filename);
     
     // 取得輸出字典
-    map<int, vector<int>> output_dict = get_output_dict(index_map);
+    // 取得輸出字典
+    map<int, vector<string>> output_dict = get_output_dict(index_map);
 
     // 顯示輸出字典內容
     print_output_dict(output_dict);
 
-    exit(0);
+    
 
 
     if (argc != 4) {
@@ -725,11 +895,58 @@ int main(int argc, char* argv[]) {
     // 取得全部 2^L 染色體
     vector<pair<string, double>> base_chromosomes = generate_chromosomes_emu(L, method);
 
-    // cout << "chromosomes & fitness" << endl;
-    // for (const auto& chom : base_chromosomes) {
-    //     cout << chom.first << " " << chom.second << endl;
-    // }
-    // cout << endl;
+    for (int i = 0; i < base_chromosomes.size(); i++) {
+        base_chromosomes[i].second = base_chromosomes.size() - i;
+        if (base_chromosomes[i].first.find('0') == string::npos)
+            base_chromosomes[i].second = 100;
+    }
+
+
+  
+    sort(base_chromosomes.begin(), base_chromosomes.end(),
+         [](auto &a, auto &b) {
+             if (a.second != b.second) return a.second > b.second; 
+             return a.first > b.first;
+         });
+
+
+    cout << "chromosomes & fitness" << endl;
+    for (const auto& chom : base_chromosomes) {
+        cout << chom.first << " " << chom.second << endl;
+    }
+    cout << endl;
+
+
+    for (const auto& S : output_dict[0]) {
+        for (const auto& s: S) {
+            // cout << s << " ";
+
+            // 上升 base_chromosomes中 chromosome[s] == 0 且 chromosome[0] == 0 的 排名，最高第二名，以符合 epi_count_map[0]中有s
+
+            map<int, set<vector<int>>> epi_count_map = count_epi_map(L, 0, base_chromosomes, method);
+
+            // adjust_chromosome_ranking(base_chromosomes, S);
+
+            cout << "epi_count_map[0] = " << epi_count_map[0].size() << endl;
+
+            for (const auto& S2 : epi_count_map[0]) {
+                for (const auto& s2: S2) {
+                    cout << s2 << " \n";
+                }
+            }
+
+            // epi_count_results[0]
+
+            // 讓 base_chromosomes中 chromosome[s] == 0 且 chromosome[0] == 0 的 fitness
+        }
+    }
+
+    
+    // cout<<"output_dict[0][1] = " <<output_dict[0][1];
+
+
+
+    exit(0);
 
    
 
