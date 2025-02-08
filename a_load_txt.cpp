@@ -898,7 +898,7 @@ int main(int argc, char* argv[]) {
     for (int i = 0; i < base_chromosomes.size(); i++) {
         base_chromosomes[i].second = base_chromosomes.size() - i;
         if (base_chromosomes[i].first.find('0') == string::npos)
-            base_chromosomes[i].second = 100;
+            base_chromosomes[i].second = 100; //全1為最佳解
     }
 
 
